@@ -1,0 +1,91 @@
+@import "../../assets/css/mixins.scss";
+
+@mixin column {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    flex-grow: 0;
+}
+
+.footer {
+    @include page-paddings;
+
+    $vertical-paddings: 8vw;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: clamp(0px, 10vw, 50px);
+
+    padding-top: $vertical-paddings;
+    padding-bottom: $vertical-paddings;
+
+    color: #efefef;
+    background-color: #5b6460;
+
+    &__first-column {
+        @include column;
+        align-items: flex-start;
+    }
+
+    &__input-with-arrow {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__input-email {
+        background-color: transparent;
+        border: none;
+        color: #efefef;
+        &::placeholder {
+            color: #efefef;
+            opacity: 50%;
+            font-style: italic;
+        }
+        &:focus {
+            outline: none;
+        }
+    }
+
+    &__newsletter-capture {
+        font-weight: 100;
+        opacity: 80%;
+        font-size: smaller;
+    }
+
+    &__copyright {
+        opacity: 70%;
+        font-size: small;
+        font-weight: 100;
+    }
+
+    &__second-column {
+        @include column;
+        align-items: flex-end;
+    }
+
+    &__links {
+        display: flex;
+        flex-direction: row;
+        gap: 10px;
+    }
+
+    &__link {
+        text-transform: uppercase;
+        text-align: end;
+        font-size: small;
+        text-decoration: none;
+        color: white;
+        font-weight: 300;
+    }
+
+    &__payment-icons {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 40px;
+    }
+}
