@@ -8,39 +8,40 @@ import PaymentPage from "../pages/PaymentPage";
 import RootPage from "../pages/RootPage";
 import TheAreaPage from "../pages/TheAreaPage";
 import TheHutPage from "../pages/TheHutPage";
+import { ROUTES } from "./constants";
 
 export const router = createBrowserRouter([
     {
-        path: "/",
+        path: "",
         element: RootPage(),
         errorElement: ErrorPage(),
         children: [
             {
-                path: "",
+                path: ROUTES.HOME,
                 element: HomePage(),
             },
             {
-                path: "booking",
+                path: ROUTES.BOOKING,
                 element: BookingPage(),
             },
             {
-                path: "payment",
+                path: ROUTES.PAYMENT,
                 element: PaymentPage(),
             },
             {
-                path: "the_hut",
+                path: ROUTES.THE_HUT,
                 element: TheHutPage(),
             },
             {
-                path: "the_area",
+                path: ROUTES.THE_AREA,
                 element: TheAreaPage(),
             },
             {
-                path: "about",
+                path: ROUTES.ABOUT,
                 element: AboutPage(),
             },
             {
-                path: "FAQ",
+                path: ROUTES.FAQ,
                 element: FAQPage(),
             },
         ],

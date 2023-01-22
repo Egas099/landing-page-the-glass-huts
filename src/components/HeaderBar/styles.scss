@@ -1,0 +1,19 @@
+@import "../../assets/css/mixins.scss";
+
+.header {
+    @include page-paddings;
+
+    $header-height: 70px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: $header-height;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+
+    &__button {
+        height: 80%;
+        width: 200px;
+    }
+}
