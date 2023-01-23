@@ -5,7 +5,7 @@ type Props = {
     text: string;
 };
 
-const Button: FC<Props> = ({ text }) => {
+const ButtonPrimary: FC<Props> = ({ text }) => {
     return (
         <div className="button" role="button">
             {text}
@@ -13,4 +13,4 @@ const Button: FC<Props> = ({ text }) => {
     );
 };
 
-export default Button;
+export default ButtonPrimary;

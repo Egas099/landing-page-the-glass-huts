@@ -1,6 +1,6 @@
 import "./styles.scss";
 import NavBar from "./NavBar/NavBar";
-import Button from "../Button/Button";
+import ButtonPrimary from "../ButtonPrimary/ButtonPrimary";
 import { Logo } from "../../assets/images/svg/Logo";
 
 const HeaderBar = () => {
@@ -11,7 +11,7 @@ const HeaderBar = () => {
             </div>
             <NavBar />
             <div className="header__button">
-                <Button text="Book now" />
+                <ButtonPrimary text="Book now" />
             </div>
         </header>
     );
