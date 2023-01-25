@@ -3,7 +3,7 @@ import NavBar from "./NavBar/NavBar";
 import ButtonPrimary from "../ButtonPrimary/ButtonPrimary";
 import { Logo } from "../../assets/images/svg/Logo";
 
-const HeaderBar = () => {
+const Header = () => {
     return (
         <header className="header">
             <div>
@@ -17,4 +17,4 @@ const HeaderBar = () => {
     );
 };
 
-export default HeaderBar;
+export default Header;

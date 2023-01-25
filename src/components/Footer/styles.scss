@@ -9,7 +9,7 @@
 }
 
 .footer {
-    @include page-paddings;
+    @include page-side-paddings;
 
     $vertical-paddings: 8vw;
 
@@ -50,7 +50,7 @@
         }
     }
 
-    &__newsletter-capture {
+    &__newsletter-caption {
         font-weight: 100;
         opacity: 80%;
         font-size: smaller;

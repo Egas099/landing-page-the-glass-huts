@@ -1,4 +1,16 @@
-@mixin page-paddings {
-    padding-left: 10vw;
-    padding-right: 10vw;
+$side-space: 10vw;
+
+@mixin page-side-margins {
+    margin-left: $side-space;
+    margin-right: $side-space;
+}
+
+@mixin page-side-paddings {
+    padding-left: $side-space;
+    padding-right: $side-space;
+}
+
+@mixin page-vertical-margins {
+    margin-top: 10vw;
+    margin-bottom: 10vw;
 }

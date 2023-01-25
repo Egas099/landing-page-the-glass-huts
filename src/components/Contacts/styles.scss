@@ -1,0 +1,25 @@
+.contacts {
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+
+    &__head {
+        font-weight: 400;
+        font-size: xx-large;
+        color: #5b6460;
+    }
+    &__paragraph {
+        color: rgb(0, 0, 0);
+        font-weight: 100;
+    }
+
+    &__icons {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+
+        width: clamp(200px, 50%, 320px);
+        height: 100px;
+    }
+}

@@ -3,7 +3,7 @@ import AboutPage from "../pages/AboutPage";
 import BookingPage from "../pages/BookingPage";
 import ErrorPage from "../pages/ErrorPage";
 import FAQPage from "../pages/FAQPage";
-import HomePage from "../pages/HomePage";
+import HomePage from "../pages/HomePage/HomePage";
 import PaymentPage from "../pages/PaymentPage";
 import RootPage from "../pages/RootPage";
 import TheAreaPage from "../pages/TheAreaPage";

@@ -6,7 +6,7 @@ import { Visa } from "../../assets/images/svg/Visa";
 import "./styles.scss";
 
 const newsletterTitle = "Newsletter";
-const newsletterCapture =
+const newsletterCaption =
     "Sign up to our newsletter for special things and receive 10% off your next order.";
 const copyright = "© 2021 The Glass Huts";
 const links = [
@@ -29,8 +29,8 @@ const Footer = () => {
                         <RightArrow />
                     </div>
                     <hr />
-                    <span className="footer__newsletter-capture">
-                        {newsletterCapture}
+                    <span className="footer__newsletter-caption">
+                        {newsletterCaption}
                     </span>
                 </div>
                 <span className="footer__copyright">{copyright}</span>

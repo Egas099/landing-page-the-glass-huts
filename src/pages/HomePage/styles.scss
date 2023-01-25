@@ -1,0 +1,123 @@
+@import "/src/assets/css/mixins.scss";
+
+@mixin grid-layout($column-count: 2, $row-count: 0) {
+    display: grid;
+    grid-template-columns: repeat($column-count, 1fr);
+    @if $row-count != 0 {
+        grid-template-rows: repeat($row-count, 1fr);
+    }
+}
+
+.page {
+    $intro-height: 100vh;
+    $book-button-shift: 45px;
+
+    &__intro-container {
+        height: $intro-height;
+        margin-bottom: $book-button-shift;
+    }
+    &__intro-image-mask {
+        z-index: -1;
+        position: absolute;
+        width: 100%;
+        height: $intro-height;
+        background: #333333;
+        opacity: 0.35;
+    }
+    &__intro-section {
+        @include page-side-margins;
+        display: flex;
+        text-align: end;
+        flex-direction: column;
+        align-items: flex-end;
+        padding-top: 40px;
+        color: white;
+    }
+    &__intro-head {
+        font-size: xxx-large;
+        margin-bottom: 0;
+        font-weight: 100;
+    }
+    &__intro-paragraph {
+        width: max(200px, 30%);
+        font-weight: 100;
+    }
+    &__book-button {
+        @include page-side-margins;
+        position: absolute;
+        bottom: -$book-button-shift;
+        width: 350px;
+    }
+
+    &__section {
+        @include page-side-margins;
+        @include page-vertical-margins;
+        @include grid-layout;
+        gap: 10vw;
+    }
+    &__section-head {
+        font-weight: 400;
+        font-size: xx-large;
+        color: #5b6460;
+    }
+    &__section-paragraph {
+        color: rgb(0, 0, 0);
+        font-weight: 100;
+    }
+
+    &__media-collage {
+        @include page-vertical-margins;
+        @include grid-layout(3);
+        gap: 30px;
+        padding: 0 30px;
+    }
+
+    &__geolocation {
+        @include grid-layout;
+        background: #e9ece0;
+    }
+    &__about-forest {
+        padding: 10vw;
+    }
+
+    &__facilities {
+        @include page-side-paddings;
+        padding-top: 50px;
+        padding-bottom: 50px;
+        color: white;
+        background: #5b6460;
+    }
+    &__facilities-head {
+        text-align: center;
+        color: white;
+        font-weight: 300;
+        font-size: xxx-large;
+        margin-bottom: 100px;
+    }
+    &__grid {
+        @include grid-layout(4, 3);
+    }
+
+    &__about {
+        position: relative;
+        @include grid-layout;
+        height: 80vh;
+    }
+    &__more-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        border-radius: 50%;
+        height: 150px;
+        width: 150px;
+        overflow: hidden;
+    }
+
+    &__contacts {
+        @include page-side-margins;
+        @include page-vertical-margins;
+        @include grid-layout;
+        gap: 10vw;
+    }
+}

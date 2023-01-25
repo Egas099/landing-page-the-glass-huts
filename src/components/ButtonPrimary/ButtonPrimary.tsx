@@ -2,12 +2,13 @@ import React, { FC } from "react";
 import "./styles.scss";
 
 type Props = {
-    text: string;
+    text: string; 
+    onClick?: () => void;
 };
 
-const ButtonPrimary: FC<Props> = ({ text }) => {
+const ButtonPrimary: FC<Props> = ({ text,onClick }) => {
     return (
-        <div className="button" role="button">
+        <div className="button" role="button" onClick={onClick}>
             {text}
         </div>
     );

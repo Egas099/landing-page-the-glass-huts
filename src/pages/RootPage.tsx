@@ -1,11 +1,11 @@
 import { Outlet } from "react-router-dom";
 import Footer from "../components/Footer/Footer";
-import HeaderBar from "../components/HeaderBar/HeaderBar";
+import Header from "../components/Header/Header";
 
 const RootPage = () => {
     return (
         <>
-            <HeaderBar />
+            <Header />
             <Outlet />
             <Footer />
         </>
