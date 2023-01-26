@@ -1,0 +1,59 @@
+.image-slider {
+    $control-panel-height: 20px;
+    height: 100%;
+    display: grid;
+    grid-template-rows: 1fr $control-panel-height;
+    gap: 20px;
+
+    &__image {
+        height: 80vh;
+        overflow: hidden;
+    }
+    &__control-panel {
+        width: 100%;
+        height: $control-panel-height;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    &__nav-arrows {
+        height: inherit;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 3vw;
+    }
+    &__arrow {
+        height: inherit;
+        width: 50px;
+        cursor: pointer;
+    }
+
+    &__progress {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &-label {
+            color: #333333;
+            padding: 0 15px;
+        }
+
+        progress {
+            $bar-color: #dcdcdc;
+
+            width: 100px;
+            height: 2px;
+            border: 0;
+            &::-webkit-progress-bar {
+                overflow: hidden;
+                background-color: $bar-color;
+            }
+            &::-webkit-progress-value {
+                background-color: #333333;
+            }
+            &::-moz-progress-bar {
+                background-color: $bar-color;
+            }
+        }
+    }
+}

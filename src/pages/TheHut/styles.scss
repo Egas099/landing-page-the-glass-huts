@@ -1,0 +1,38 @@
+@import "/src/assets/css/mixins.scss";
+
+.hut-page {
+    &__panorama {
+        height: 50vh;
+        position: relative;
+
+        &-head {
+            position: absolute;
+            top: 30%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-weight: 300;
+            color: #ffffff;
+            text-align: center;
+            font-size: 4rem;
+            margin: 0;
+        }
+    }
+
+    &__section {
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        @include page-vertical-margins;
+        @include page-side-margins;
+        min-height: 70vh;
+    }
+}
+
+.right-section {
+    padding-bottom: 40px;
+    padding-left: 10vw;
+}
+.left-section {
+    padding-bottom: 40px;
+    padding-right: 10vw;
+}

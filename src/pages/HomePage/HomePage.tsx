@@ -43,8 +43,11 @@ const HomePage = () => {
     return (
         <div className="page">
             <div className="page__intro-container">
-                <PanoramaWithContent imageSource={images.intro}>
-                    <div className="page__intro-image-mask" />
+                <PanoramaWithContent
+                    imageSource={images.intro}
+                    maskColor="#333333"
+                    maskOpacity={0.35}
+                >
                     <section className="page__intro-section">
                         <h1 className="page__intro-head">
                             {introSection.head}

@@ -1,13 +1,5 @@
 @import "/src/assets/css/mixins.scss";
 
-@mixin grid-layout($column-count: 2, $row-count: 0) {
-    display: grid;
-    grid-template-columns: repeat($column-count, 1fr);
-    @if $row-count != 0 {
-        grid-template-rows: repeat($row-count, 1fr);
-    }
-}
-
 .page {
     $intro-height: 100vh;
     $book-button-shift: 45px;
@@ -15,14 +7,6 @@
     &__intro-container {
         height: $intro-height;
         margin-bottom: $book-button-shift;
-    }
-    &__intro-image-mask {
-        z-index: -1;
-        position: absolute;
-        width: 100%;
-        height: $intro-height;
-        background: #333333;
-        opacity: 0.35;
     }
     &__intro-section {
         @include page-side-margins;

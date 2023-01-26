@@ -3,12 +3,12 @@ import "./styles.scss";
 
 type Props = {
     src: string;
-    alt: string;
+    alt?: string;
     width?: string;
     height?: string;
 };
 
-const Image: FC<Props> = ({ src, alt, width = "100%", height = "initial" }) => {
+const Image: FC<Props> = ({ src, alt = "", width = "100%", height = "initial" }) => {
     return (
         <img
             className="image"

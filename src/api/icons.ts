@@ -13,8 +13,11 @@ export const icons = {
     plug: `${ICON_BASE_URL}/plug.svg`,
     shower: `${ICON_BASE_URL}/shower.svg`,
     wifi: `${ICON_BASE_URL}/wifi.svg`,
-
     instagram: `${ICON_BASE_URL}/instagram.svg`,
     facebook: `${ICON_BASE_URL}/facebook.svg`,
     twitter: `${ICON_BASE_URL}/twitter.svg`,
+    rightArrow: `${ICON_BASE_URL}/rightArrow.svg`,
+    rightArrowDisabled: `${ICON_BASE_URL}/rightArrowDisabled.svg`,
+    leftArrow: `${ICON_BASE_URL}/leftArrow.svg`,
+    leftArrowDisabled: `${ICON_BASE_URL}/leftArrowDisabled.svg`,
 };

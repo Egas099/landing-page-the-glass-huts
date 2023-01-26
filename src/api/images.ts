@@ -9,4 +9,9 @@ export const images = {
     inside3: `${IMAGES_BASE_URL}/inside3.jpeg`,
     intro: `${IMAGES_BASE_URL}/intro.jpeg`,
     video: `${IMAGES_BASE_URL}/video.jpeg`,
+    insidePanorama: `${IMAGES_BASE_URL}/insidePanorama.png`,
+    hotTube: `${IMAGES_BASE_URL}/hotTube.jpeg`,
+    breakfast1: `${IMAGES_BASE_URL}/breakfast1.jpeg`,
+    breakfast2: `${IMAGES_BASE_URL}/breakfast2.jpeg`,
+    dinner1: `${IMAGES_BASE_URL}/dinner1.jpeg`,
 };

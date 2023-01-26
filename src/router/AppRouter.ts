@@ -7,7 +7,7 @@ import HomePage from "../pages/HomePage/HomePage";
 import PaymentPage from "../pages/PaymentPage";
 import RootPage from "../pages/RootPage";
 import TheAreaPage from "../pages/TheAreaPage";
-import TheHutPage from "../pages/TheHutPage";
+import TheHutPage from "../pages/TheHut/TheHutPage";
 import { ROUTES } from "./constants";
 
 export const router = createBrowserRouter([

@@ -14,3 +14,11 @@ $side-space: 10vw;
     margin-top: 10vw;
     margin-bottom: 10vw;
 }
+
+@mixin grid-layout($column-count: 2, $row-count: 0) {
+    display: grid;
+    grid-template-columns: repeat($column-count, 1fr);
+    @if $row-count != 0 {
+        grid-template-rows: repeat($row-count, 1fr);
+    }
+}
