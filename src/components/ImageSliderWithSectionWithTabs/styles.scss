@@ -1,0 +1,34 @@
+@import "../../assets/css/mixins.scss";
+
+@mixin section-with-tabs {
+    box-sizing: border-box;
+    width: 50%;
+    padding-bottom: 40px;
+}
+
+.image-slider-with-section-with-tabs {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: row;
+    @include page-vertical-margins;
+    @include page-side-margins;
+    min-height: 70vh;
+
+    &__left-section {
+        @include section-with-tabs;
+        padding-right: 10vw;
+    }
+    &__right-section {
+        @include section-with-tabs;
+        padding-left: 10vw;
+    }
+    &__slider {
+        box-sizing: border-box;
+        max-height: 100vh;
+        width: 50%;
+    }
+}
+
+.reverse {
+    flex-direction: row-reverse;
+}

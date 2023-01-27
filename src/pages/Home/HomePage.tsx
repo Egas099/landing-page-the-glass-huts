@@ -1,6 +1,6 @@
 import { icons } from "../../api/icons";
 import { images } from "../../api/images";
-import ButtonPrimary from "../../components/ButtonPrimary/ButtonPrimary";
+import Button from "../../components/Button/Button";
 import ButtonWithPrice from "../../components/ButtonWithPrice/ButtonWithPrice";
 import Contacts from "../../components/Contacts/Contacts";
 import Geolocation from "../../components/Geolocation/Geolocation";
@@ -77,7 +77,7 @@ const HomePage = () => {
                 />
             </section>
             <div className="page__media-collage">
-                <Image src={images.hutFromSide1} alt="The Hut" />
+                <Image src={images.outside1} alt="The Hut" />
                 <Image src={images.inside1} alt="Inside the Hut" />
                 <Image src={images.video} alt="video" />
             </div>
@@ -101,16 +101,16 @@ const HomePage = () => {
                 </div>
             </section>
             <div className="page__about">
-                <Image src={images.hutFromSide3} alt="Outside" height="100%" />
+                <Image src={images.outside3} alt="Outside" height="100%" />
                 <Image src={images.inside2} alt="Inside" height="100%" />
                 <div className="page__more-button">
-                    <ButtonPrimary text="More about us" />
+                    <Button text="More about us" />
                 </div>
             </div>
             <div className="page__contacts">
                 <Contacts />
                 <div>
-                    <Image src={images.hutFromSide2} alt="Outside" />
+                    <Image src={images.outside2} alt="Outside" />
                     <ButtonWithPrice price={price} text="Book a hut" />
                 </div>
             </div>

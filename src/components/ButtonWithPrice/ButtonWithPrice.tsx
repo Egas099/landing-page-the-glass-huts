@@ -1,5 +1,5 @@
 import { FC } from "react";
-import ButtonPrimary from "../ButtonPrimary/ButtonPrimary";
+import Button from "../Button/Button";
 import "./styles.scss";
 
 type Props = {
@@ -12,7 +12,7 @@ const ButtonWithPrice: FC<Props> = ({ price, text, onClick }) => {
     return (
         <div className="button-with-price">
             <div className="button-with-price__button">
-                <ButtonPrimary text={text} onClick={onClick} />
+                <Button text={text} onClick={onClick} />
             </div>
             <div className="button-with-price__price-box">
                 <span className="button-with-price__price-label-from">

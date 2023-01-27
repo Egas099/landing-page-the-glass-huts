@@ -17,22 +17,4 @@
             margin: 0;
         }
     }
-
-    &__section {
-        box-sizing: border-box;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        @include page-vertical-margins;
-        @include page-side-margins;
-        min-height: 70vh;
-    }
-}
-
-.right-section {
-    padding-bottom: 40px;
-    padding-left: 10vw;
-}
-.left-section {
-    padding-bottom: 40px;
-    padding-right: 10vw;
 }

@@ -6,7 +6,7 @@ import FAQPage from "../pages/FAQPage";
 import HomePage from "../pages/Home/HomePage";
 import PaymentPage from "../pages/PaymentPage";
 import RootPage from "../pages/RootPage";
-import TheAreaPage from "../pages/TheAreaPage";
+import TheAreaPage from "../pages/TheArea/TheAreaPage";
 import TheHutPage from "../pages/TheHut/TheHutPage";
 import { ROUTES } from "./constants";
 

@@ -1,9 +1,9 @@
 const IMAGES_BASE_URL = "http://localhost:3000/images";
 
 export const images = {
-    hutFromSide1: `${IMAGES_BASE_URL}/hutFromSide1.jpeg`,
-    hutFromSide2: `${IMAGES_BASE_URL}/hutFromSide2.jpeg`,
-    hutFromSide3: `${IMAGES_BASE_URL}/hutFromSide3.jpeg`,
+    outside1: `${IMAGES_BASE_URL}/outside1.jpeg`,
+    outside2: `${IMAGES_BASE_URL}/outside2.jpeg`,
+    outside3: `${IMAGES_BASE_URL}/outside3.jpeg`,
     inside1: `${IMAGES_BASE_URL}/inside1.jpeg`,
     inside2: `${IMAGES_BASE_URL}/inside2.jpeg`,
     inside3: `${IMAGES_BASE_URL}/inside3.jpeg`,
@@ -14,4 +14,12 @@ export const images = {
     breakfast1: `${IMAGES_BASE_URL}/breakfast1.jpeg`,
     breakfast2: `${IMAGES_BASE_URL}/breakfast2.jpeg`,
     dinner1: `${IMAGES_BASE_URL}/dinner1.jpeg`,
+    areaPanorama: `${IMAGES_BASE_URL}/areaPanorama.png`,
+    nature1: `${IMAGES_BASE_URL}/nature1.jpeg`,
+    nature2: `${IMAGES_BASE_URL}/nature2.jpeg`,
+    town1: `${IMAGES_BASE_URL}/town1.jpeg`,
+    restaurant1: `${IMAGES_BASE_URL}/restaurant1.jpeg`,
+    road1: `${IMAGES_BASE_URL}/road1.jpeg`,
+    map: `${IMAGES_BASE_URL}/map.png`,
+    empty: `${IMAGES_BASE_URL}/.png`,
 };

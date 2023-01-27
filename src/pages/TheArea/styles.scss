@@ -1,0 +1,91 @@
+@import "/src/assets/css/mixins.scss";
+
+.area-page {
+    &__panorama {
+        height: 50vh;
+        position: relative;
+
+        &-head {
+            padding-top: 30px;
+            font-weight: 300;
+            color: #ffffff;
+            text-align: center;
+            font-size: 4rem;
+            margin: 0;
+        }
+        &-location {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 10px;
+            font-weight: 300;
+            font-size: 18px;
+            line-height: 24px;
+            text-decoration-line: underline;
+            color: #ffffff;
+            margin-bottom: 10vh;
+        }
+        &-button {
+            width: 180px;
+            height: 55px;
+            margin: auto;
+        }
+    }
+
+    &__vesterborg {
+        @include page-side-margins;
+        @include page-vertical-margins;
+
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+
+        &-section {
+            padding-left: 10vw;
+            padding-bottom: 40px;
+
+            &-head {
+                color: #5b6460;
+                font-weight: 400;
+                font-size: 2.5em;
+            }
+            &-sub-head {
+                font-size: 1.2em;
+                color: #5b6460;
+                font-style: italic;
+            }
+            &-paragraph {
+                font-weight: 300;
+                color: #333333;
+                line-height: 1.8;
+            }
+        }
+    }
+
+    &__map {
+        @include page-side-margins;
+        @include page-vertical-margins;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10vh;
+
+        &-head {
+            color: #5b6460;
+            font-weight: 400;
+            font-size: 2.5em;
+        }
+    }
+
+    &__sections-head {
+        @include page-side-margins;
+        color: #5b6460;
+        font-weight: 400;
+        font-size: 2.5em;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    &__geolocation {
+        width: 100%;
+        height: 60vh;
+    }
+}
