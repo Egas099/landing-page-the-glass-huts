@@ -1,0 +1,115 @@
+@import "/src/assets/css/mixins.scss";
+
+.about-page {
+    &__panorama {
+        height: 50vh;
+
+        &-head {
+            padding-top: 30px;
+            font-weight: 300;
+            color: #ffffff;
+            text-align: center;
+            font-size: 4rem;
+            margin: 0;
+            margin-bottom: 13vh;
+        }
+        &-buttons {
+            display: grid;
+            grid-template-columns: 180px 180px;
+            gap: 24px;
+            height: 55px;
+            justify-content: center;
+        }
+    }
+
+    &__section {
+        @include page-side-margins;
+        @include page-vertical-margins;
+        @include grid-layout;
+
+        &-text {
+            padding-left: 20vh;
+        }
+        &-citation {
+            font-size: 24px;
+            color: #5b6460;
+            font-style: italic;
+        }
+        &-paragraph {
+            font-weight: 300;
+            font-size: 16px;
+            color: #333333;
+            line-height: 1.8;
+        }
+    }
+
+    &__collage {
+        &-head {
+            @include page-side-margins;
+            color: #5b6460;
+            font-weight: 400;
+            font-size: 2.5em;
+            margin-top: 0;
+            max-width: 500px;
+            margin: auto;
+        }
+        &-images {
+            @include page-vertical-margins;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr 1fr;
+            gap: 20px;
+            padding: 0 30px;
+            &-box {
+                grid-column: 2 / 4;
+            }
+        }
+        &-text-box {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 10vh;
+            font-size: 20px;
+            font-weight: 400;
+            line-height: 36px;
+            font-style: italic;
+            background: #e9ece0;
+            color: #333333;
+        }
+    }
+
+    &__contacts {
+        @include page-side-margins;
+        @include page-vertical-margins;
+
+        &-head {
+            font-weight: 400;
+            font-size: 40px;
+            line-height: 60px;
+            color: #5b6460;
+            margin-bottom: 15vh;
+        }
+        &-box {
+            display: grid;
+            grid-template-columns: 2fr 3fr;
+        }
+    }
+
+    &__from-love {
+        @include page-vertical-margins;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &-text {
+            width: 150px;
+            font-weight: 400;
+            font-size: 20px;
+            text-align: center;
+            color: #5b6460;
+        }
+        &-icon {
+            width: 50px;
+        }
+    }
+}

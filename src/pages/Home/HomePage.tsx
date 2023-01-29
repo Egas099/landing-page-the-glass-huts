@@ -108,7 +108,12 @@ const HomePage = () => {
                 </div>
             </div>
             <div className="page__contacts">
-                <Contacts />
+                <div className="">
+                    <h2 className="page__section-head">
+                        Stay in touch with us
+                    </h2>
+                    <Contacts />
+                </div>
                 <div>
                     <Image src={images.outside2} alt="Outside" />
                     <ButtonWithPrice price={price} text="Book a hut" />

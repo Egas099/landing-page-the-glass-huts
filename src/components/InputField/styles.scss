@@ -1,0 +1,43 @@
+.input-field {
+    position: relative;
+    $padding: 21px 21.5px 14px 21.5px;
+    box-sizing: border-box;
+
+    &__input {
+        box-sizing: border-box;
+        height: 50px;
+        width: 100%;
+        border: 0.7px solid #828282;
+        padding: $padding;
+        font-size: 16px;
+        line-height: 50%;
+        &:focus {
+            outline: none;
+        }
+        &:focus ~ &-hint,
+        &:not(:placeholder-shown) ~ &-hint {
+            top: 11px;
+            font-size: 8px;
+            font-weight: 600;
+        }
+        &:not(:placeholder-shown):not(:focus):invalid {
+            color: red;
+            border-color: red;
+        }
+    }
+    &__input-hint {
+        transition: all 0.1s;
+        position: absolute;
+        top: 50%;
+        left: 21.5px;
+        transform: translateY(-50%);
+
+        padding: 0 $padding;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+        color: #828282;
+
+        pointer-events: none;
+    }
+}

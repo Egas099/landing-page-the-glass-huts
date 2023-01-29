@@ -25,13 +25,12 @@ const links = [
 const Contacts = () => {
     return (
         <div className="contacts">
-            <h2 className="contacts__head">Stay in touch with us</h2>
             <address>
                 <p className="contacts__paragraph">Vesterborg, Denmark</p>
                 <p className="contacts__paragraph">
-                    <a href={`mailto:${email}`}>{email}</a>
-                    <br />
                     <a href={`tel:${telephone}`}>{telephone}</a>
+                    <br />
+                    <a href={`mailto:${email}`}>{email}</a>
                 </p>
             </address>
             <div className="contacts__icons">

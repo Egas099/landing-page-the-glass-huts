@@ -7,13 +7,19 @@ type Props = {
     text: string;
     onClick?: () => void;
     type?: ButtonType;
+    formId?: string;
 };
 
-const Button: FC<Props> = ({ text, onClick, type = "primary" }) => {
+const Button: FC<Props> = ({ text, onClick, type = "primary", formId }) => {
     return (
-        <div className={`button ${type}`} role="button" onClick={onClick}>
+        <button
+            form={formId}
+            className={`button button-${type}`}
+            onClick={onClick}
+            type={formId ? "submit" : "button"}
+        >
             {text}
-        </div>
+        </button>
     );
 };
 
