@@ -6,7 +6,7 @@ export const Visa = () => (
         fill="none"
         xmlns="http://www.w3.org/2000/svg"
     >
-        <g clip-path="url(#clip0_2_1186)">
+        <g clipPath="url(#clip0_2_1186)">
             <path
                 d="M19.153 16.7991L16.722 31.0651H20.61L23.043 16.7991H19.153Z"
                 fill="#E9ECE0"
@@ -35,4 +35,3 @@ export const Visa = () => (
         </defs>
     </svg>
 );
-

@@ -36,6 +36,7 @@ const Contacts = () => {
             <div className="contacts__icons">
                 {links.map(({ iconSource, name, url }) => (
                     <IconButton
+                        key={name}
                         alternativeText={name}
                         iconSource={iconSource}
                         link={url}

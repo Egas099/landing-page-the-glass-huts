@@ -96,7 +96,11 @@ const HomePage = () => {
                 <h2 className="page__facilities-head">Facilities</h2>
                 <div className="page__grid">
                     {facilities.map(({ iconSrc, caption }) => (
-                        <IconWithCaption src={iconSrc} caption={caption} />
+                        <IconWithCaption
+                            src={iconSrc}
+                            caption={caption}
+                            key={iconSrc}
+                        />
                     ))}
                 </div>
             </section>

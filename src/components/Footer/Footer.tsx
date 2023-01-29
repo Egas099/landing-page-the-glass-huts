@@ -37,8 +37,8 @@ const Footer = () => {
             </div>
             <div className="footer__second-column">
                 <div className="footer__links">
-                    {links.map(({ text, to }) => (
-                        <a className="footer__link" href={to}>
+                    {links.map(({ text, to }, index) => (
+                        <a className="footer__link" href={to} key={index}>
                             {text}
                         </a>
                     ))}
