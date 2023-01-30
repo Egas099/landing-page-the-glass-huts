@@ -1,0 +1,15 @@
+@import "/src/assets/css/mixins.scss";
+
+.faq-page {
+    &__list {
+        @include page-side-paddings;
+        @include page-vertical-margins;
+        padding-right: 30vw;
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+    }
+    &__details {
+        transition: all 1s;
+    }
+}

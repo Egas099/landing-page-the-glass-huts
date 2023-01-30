@@ -22,4 +22,5 @@ export const icons = {
     leftArrowDisabled: `${ICON_BASE_URL}/leftArrowDisabled.svg`,
     geopoint: `${ICON_BASE_URL}/geopoint.svg`,
     heart: `${ICON_BASE_URL}/heart.svg`,
+    arrowDown: `${ICON_BASE_URL}/arrowDown.svg`,
 };
