@@ -1,0 +1,11 @@
+@import "/src/assets/css/mixins.scss";
+
+.booking-page {
+    &__section {
+        margin: $large-page-gap;
+        margin-right: $small-page-gap;
+        display: grid;
+        grid-template-columns: 2fr 1fr;
+        column-gap: $large-page-gap;
+    }
+}

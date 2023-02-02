@@ -1,13 +1,14 @@
-$side-space: 10vw;
+$large-page-gap: 10vw;
+$small-page-gap: 2vw;
 
 @mixin page-side-margins {
-    margin-left: $side-space;
-    margin-right: $side-space;
+    margin-left: $large-page-gap;
+    margin-right: $large-page-gap;
 }
 
 @mixin page-side-paddings {
-    padding-left: $side-space;
-    padding-right: $side-space;
+    padding-left: $large-page-gap;
+    padding-right: $large-page-gap;
 }
 
 @mixin page-vertical-margins {
