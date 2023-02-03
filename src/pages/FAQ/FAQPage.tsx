@@ -1,4 +1,4 @@
-import FAQDetails from "../../components/DropDownTemplate/DropDownTemplate";
+import FAQDetails from "../../components/FAQDetails/FAQDetails";
 import "./styles.scss";
 
 const FAQPage = () => {

@@ -9,14 +9,14 @@ type Props = {
 
 const FAQDetails: FC<PropsWithChildren<Props>> = ({ summary, children }) => {
     return (
-        <details className="drop-down-template">
-            <summary className="drop-down-template__summary">
+        <details className="faq-details">
+            <summary className="faq-details__summary">
                 {summary}
-                <div className="drop-down-template__summary-icon">
+                <div className="faq-details__summary-icon">
                     <Image src={icons.arrowDown} width={"20px"} />
                 </div>
             </summary>
-            <div className={"drop-down-template__content"}>{children}</div>
+            <div className={"faq-details__content"}>{children}</div>
         </details>
     );
 };
