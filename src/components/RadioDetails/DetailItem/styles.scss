@@ -1,0 +1,15 @@
+.detail-item {
+    display: flex;
+    gap: 20px;
+    padding-left: 20px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #333333;
+
+    &__header {
+        font-weight: 600;
+    }
+    &__caption {
+        font-weight: 300;
+    }
+}

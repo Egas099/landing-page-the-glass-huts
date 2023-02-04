@@ -23,4 +23,6 @@ export const icons = {
     geopoint: `${ICON_BASE_URL}/geopoint.svg`,
     heart: `${ICON_BASE_URL}/heart.svg`,
     arrowDown: `${ICON_BASE_URL}/arrowDown.svg`,
+    plus: `${ICON_BASE_URL}/plus.svg`,
+    checkMark: `${ICON_BASE_URL}/checkMark.svg`,
 };
