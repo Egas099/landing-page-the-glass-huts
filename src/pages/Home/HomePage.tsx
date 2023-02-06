@@ -45,7 +45,7 @@ const HomePage = () => {
             <div className="page__intro-container">
                 <PanoramaWithContent
                     imageSource={images.intro}
-                    maskColor="#333333"
+                    maskColor="var(--Grey-1)"
                     maskOpacity={0.35}
                 >
                     <section className="page__intro-section">

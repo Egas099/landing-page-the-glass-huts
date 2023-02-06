@@ -16,10 +16,10 @@
         font-weight: 600;
         font-size: 24px;
         line-height: 24px;
-        color: #5b6460;
+        color: var(--Grey-green-1);
     }
     &__section-divider {
-        border: 0.7px solid #5b6460;
+        border: 0.7px solid var(--Grey-green-1);
     }
     &__personal-info-inputs {
         display: grid;
@@ -49,14 +49,14 @@
         gap: 50px;
 
         &-accepting {
-            color: #333333;
+            color: var(--Grey-1);
             font-weight: 400;
             font-size: 16px;
             line-height: 28px;
         }
         &-terms-and-conditions {
             cursor: pointer;
-            color: #5b6460;
+            color: var(--Grey-green-1);
             text-decoration-line: underline;
             font-weight: 700;
             font-size: 16px;

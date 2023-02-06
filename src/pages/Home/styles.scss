@@ -15,7 +15,7 @@
         flex-direction: column;
         align-items: flex-end;
         padding-top: 40px;
-        color: white;
+        color: var(--White);
     }
     &__intro-head {
         font-size: xxx-large;
@@ -42,10 +42,10 @@
     &__section-head {
         font-weight: 400;
         font-size: xx-large;
-        color: #5b6460;
+        color: var(--Grey-green-1);
     }
     &__section-paragraph {
-        color: rgb(0, 0, 0);
+        color: var(--Grey-1);
         font-weight: 100;
     }
 
@@ -68,12 +68,12 @@
         @include page-side-paddings;
         padding-top: 50px;
         padding-bottom: 50px;
-        color: white;
-        background: #5b6460;
+        color: var(--White);
+        background: var(--Grey-green-1);
     }
     &__facilities-head {
         text-align: center;
-        color: white;
+        color: var(--White);
         font-weight: 300;
         font-size: xxx-large;
         margin-bottom: 100px;

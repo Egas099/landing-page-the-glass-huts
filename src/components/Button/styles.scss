@@ -21,30 +21,28 @@
     &-primary {
         font-size: 17px;
         border: none;
-        color: white;
-        background-color: #5b6460;
+        color: var(--White);
+        background-color: var(--Grey-green-1);
         &:hover {
-            background-color: #808e88;
+            background-color: var(--Grey-green-2);
         }
         &:active {
-            background-color: #979797;
+            background-color: var(--Grey-green-3);
         }
     }
 
     &-transparent {
-        border: 0.7px solid #ffffff;
+        border: 0.7px solid var(--White);
         font-size: 14px;
         letter-spacing: 1px;
         background-color: transparent;
-        color: #ffffff;
-        opacity: 0.8;
+        color: var(--White);
+        opacity: 0.7;
         &:hover {
-            box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
-            background-color: rgba(255, 255, 255, 0.1);
-            opacity: 1;
+            opacity: 0.8;
         }
         &:active {
-            background-color: #ffffff44;
+            opacity: 1;
         }
     }
 }

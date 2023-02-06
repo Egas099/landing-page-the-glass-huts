@@ -4,10 +4,21 @@ body {
         "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",
         "Helvetica Neue", sans-serif;
     -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+    -moz-osx-font-smoothing: Greyscale;
 }
 
 code {
     font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
         monospace;
+}
+
+:root {
+    --White: rgb(255, 255, 255);
+    --Grey-1: #333333;
+    --Grey-2: #828282;
+    --Grey-green-1: #5b6460;
+    --Grey-green-2: #7b837f;
+    --Grey-green-3: #adb1af;
+    --Green-1: #41916d;
+    --Red-1: #ff0000;
 }

@@ -14,7 +14,7 @@ const TheAreaPage = () => {
             <div className="area-page__panorama">
                 <PanoramaWithContent
                     imageSource={images.areaPanorama}
-                    maskColor="#333333"
+                    maskColor="var(--Grey-1)"
                     maskOpacity={0.5}
                 >
                     <h1 className="area-page__panorama-head">The Area</h1>

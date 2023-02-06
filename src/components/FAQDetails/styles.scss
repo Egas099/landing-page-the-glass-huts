@@ -1,6 +1,6 @@
 .faq-details {
     box-sizing: border-box;
-    border: 0.7px solid #5b6460;
+    border: 0.7px solid var(--Grey-green-1);
 
     &[open] {
         border-color: transparent;
@@ -23,7 +23,7 @@
         font-weight: 400;
         font-size: 18px;
         line-height: 18px;
-        color: #333333;
+        color: var(--Grey-1);
         list-style: none;
 
         &-icon {
@@ -47,7 +47,7 @@
         font-weight: 400;
         font-size: 14px;
         line-height: 18px;
-        color: #333333;
+        color: var(--Grey-1);
         &_opened {
             height: 100%;
             visibility: initial;

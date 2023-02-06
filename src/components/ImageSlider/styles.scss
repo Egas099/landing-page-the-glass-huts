@@ -33,18 +33,22 @@
         justify-content: center;
 
         &-label {
-            color: #333333;
+            color: var(--Grey-1);
             padding: 0 15px;
         }
 
         progress {
             $bar-color: #dcdcdc;
 
+            appearance: none;
+            -moz-appearance: none;
+            -webkit-appearance: none;
+
             width: 100px;
             height: 2px;
             border: 0;
+
             &::-webkit-progress-bar {
-                overflow: hidden;
                 background-color: $bar-color;
             }
             &::-webkit-progress-value {

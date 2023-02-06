@@ -21,8 +21,8 @@
     padding-top: $vertical-paddings;
     padding-bottom: $vertical-paddings;
 
-    color: #efefef;
-    background-color: #5b6460;
+    color: var(--White);
+    background-color: var(--Grey-green-1);
 
     &__first-column {
         @include column;
@@ -39,9 +39,9 @@
     &__input-email {
         background-color: transparent;
         border: none;
-        color: #efefef;
+        color: var(--White);
         &::placeholder {
-            color: #efefef;
+            color: var(--White);
             opacity: 50%;
             font-style: italic;
         }
@@ -78,7 +78,7 @@
         text-align: end;
         font-size: small;
         text-decoration: none;
-        color: white;
+        color: var(--White);
         font-weight: 300;
     }
 
