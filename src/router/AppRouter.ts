@@ -4,7 +4,7 @@ import BookingPage from "../pages/BookingPage/BookingPage";
 import ErrorPage from "../pages/ErrorPage";
 import FAQPage from "../pages/FAQ/FAQPage";
 import HomePage from "../pages/Home/HomePage";
-import PaymentPage from "../pages/PaymentPage";
+import PaymentPage from "../pages/Payment/PaymentPage";
 import RootPage from "../pages/RootPage";
 import TheAreaPage from "../pages/TheArea/TheAreaPage";
 import TheHutPage from "../pages/TheHut/TheHutPage";

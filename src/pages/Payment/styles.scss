@@ -1,0 +1,70 @@
+@import "/src/assets/css/mixins.scss";
+
+.payment-page {
+    margin: $large-page-gap;
+    margin-right: $small-page-gap;
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    column-gap: $large-page-gap;
+
+    &__divider {
+        margin: 24px 0;
+    }
+    &__section-head {
+        margin-top: 100px;
+
+        font-weight: 600;
+        font-size: 24px;
+        line-height: 24px;
+        color: #5b6460;
+    }
+    &__section-divider {
+        border: 0.7px solid #5b6460;
+    }
+    &__personal-info-inputs {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+    &__card-form {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        &-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+
+            &-with-gap {
+                gap: 24px;
+            }
+        }
+    }
+    &__message {
+        height: 100px;
+    }
+    &__confirm {
+        margin-top: 50px;
+        display: grid;
+        gap: 50px;
+
+        &-accepting {
+            color: #333333;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 28px;
+        }
+        &-terms-and-conditions {
+            cursor: pointer;
+            color: #5b6460;
+            text-decoration-line: underline;
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 28px;
+        }
+        &-button {
+            height: 60px;
+            width: 384px;
+        }
+    }
+}
