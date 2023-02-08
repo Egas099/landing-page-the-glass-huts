@@ -1,3 +1,21 @@
+@import "./fonts.scss";
+
+:root {
+    --White: #ffffff;
+    --Black: #000000;
+    --Grey-1: #333333;
+    --Grey-2: #828282;
+    --Grey-green-1: #5b6460;
+    --Grey-green-2: #7b837f;
+    --Grey-green-3: #adb1af;
+    --Green-1: #41916d;
+    --Red-1: #ff0000;
+}
+
+html {
+    font-size: 62.5%;
+}
+
 body {
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
@@ -12,13 +30,19 @@ code {
         monospace;
 }
 
-:root {
-    --White: rgb(255, 255, 255);
-    --Grey-1: #333333;
-    --Grey-2: #828282;
-    --Grey-green-1: #5b6460;
-    --Grey-green-2: #7b837f;
-    --Grey-green-3: #adb1af;
-    --Green-1: #41916d;
-    --Red-1: #ff0000;
+h1 {
+    font-weight: 300;
+    font-size: 7rem;
+    color: var(--White);
+}
+h2 {
+    font-weight: 400;
+    font-size: 4rem;
+    color: var(--Grey-green-1);
+}
+p {
+    font-weight: 300;
+    font-size: 1.6rem;
+    line-height: 1.8;
+    color: var(--Grey-1);
 }

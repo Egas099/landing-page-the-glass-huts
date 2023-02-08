@@ -19,7 +19,7 @@ const Footer = () => {
     return (
         <footer className="footer">
             <div className="footer__first-column">
-                <span>{newsletterTitle}</span>
+                <span className="footer__newsletter-header">{newsletterTitle}</span>
                 <div>
                     <div className="footer__input-with-arrow">
                         <input

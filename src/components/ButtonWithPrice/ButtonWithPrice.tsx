@@ -14,11 +14,11 @@ const ButtonWithPrice: FC<Props> = ({ price, text, onClick }) => {
             <div className="button-with-price__button">
                 <Button text={text} onClick={onClick} />
             </div>
-            <div className="button-with-price__price-box">
+            <div className="button-with-price__price">
                 <span className="button-with-price__price-label-from">
                     from
                 </span>
-                <span className="button-with-price__price">{price}</span>
+                <span className="button-with-price__price-value">{price}</span>
                 <span className="button-with-price__price-label-unit">
                     per night
                 </span>

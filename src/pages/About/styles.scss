@@ -6,10 +6,7 @@
 
         &-head {
             padding-top: 30px;
-            font-weight: 300;
-            color: var(--White);
             text-align: center;
-            font-size: 4rem;
             margin: 0;
             margin-bottom: 13vh;
         }
@@ -31,13 +28,14 @@
             padding-left: 20vh;
         }
         &-citation {
-            font-size: 24px;
+            font-weight: 400;
+            font-size: 2.4rem;
             color: var(--Grey-green-1);
             font-style: italic;
         }
         &-paragraph {
             font-weight: 300;
-            font-size: 16px;
+            font-size: 1.6rem;
             color: var(--Grey-1);
             line-height: 1.8;
         }
@@ -45,11 +43,6 @@
 
     &__collage {
         &-head {
-            @include page-side-margins;
-            color: var(--Grey-green-1);
-            font-weight: 400;
-            font-size: 2.5em;
-            margin-top: 0;
             max-width: 500px;
             margin: auto;
         }
@@ -69,8 +62,8 @@
             flex-direction: column;
             justify-content: center;
             padding: 10vh;
-            font-size: 20px;
             font-weight: 400;
+            font-size: 2rem;
             line-height: 36px;
             font-style: italic;
             background: #e9ece0;
@@ -83,10 +76,6 @@
         @include page-vertical-margins;
 
         &-head {
-            font-weight: 400;
-            font-size: 40px;
-            line-height: 60px;
-            color: var(--Grey-green-1);
             margin-bottom: 15vh;
         }
         &-box {
@@ -104,7 +93,7 @@
         &-text {
             width: 150px;
             font-weight: 400;
-            font-size: 20px;
+            font-size: 2rem;
             text-align: center;
             color: var(--Grey-green-1);
         }

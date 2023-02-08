@@ -9,7 +9,7 @@
         width: 100%;
         border: 0.7px solid var(--Grey-2);
         padding: $padding;
-        font-size: 16px;
+        font-size: 1.6rem;
         line-height: 50%;
         &:focus {
             outline: none;
@@ -17,7 +17,7 @@
         &:focus ~ &-hint,
         &:not(:placeholder-shown) ~ &-hint {
             top: 11px;
-            font-size: 8px;
+            font-size: 0.8rem;
             font-weight: 600;
         }
         &:not(:placeholder-shown):not(:focus):invalid {
@@ -34,7 +34,7 @@
 
         padding: 0 $padding;
         font-weight: 400;
-        font-size: 16px;
+        font-size: 1.6rem;
         line-height: 18px;
         color: var(--Grey-2);
 

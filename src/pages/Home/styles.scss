@@ -4,28 +4,31 @@
     $intro-height: 100vh;
     $book-button-shift: 45px;
 
-    &__intro-container {
+    &__intro {
         height: $intro-height;
         margin-bottom: $book-button-shift;
+
+        &-section {
+            @include page-side-margins;
+            display: flex;
+            text-align: end;
+            flex-direction: column;
+            align-items: flex-end;
+            padding-top: 40px;
+            color: var(--White);
+        }
+        &-head {
+            margin-bottom: 0;
+        }
+        &-paragraph {
+            text-align: center;
+            width: max(200px, 30%);
+            font-weight: 100;
+            font-size: 2rem;
+            color: var(--White);
+        }
     }
-    &__intro-section {
-        @include page-side-margins;
-        display: flex;
-        text-align: end;
-        flex-direction: column;
-        align-items: flex-end;
-        padding-top: 40px;
-        color: var(--White);
-    }
-    &__intro-head {
-        font-size: xxx-large;
-        margin-bottom: 0;
-        font-weight: 100;
-    }
-    &__intro-paragraph {
-        width: max(200px, 30%);
-        font-weight: 100;
-    }
+
     &__book-button {
         @include page-side-margins;
         position: absolute;
@@ -38,15 +41,6 @@
         @include page-vertical-margins;
         @include grid-layout;
         gap: 10vw;
-    }
-    &__section-head {
-        font-weight: 400;
-        font-size: xx-large;
-        color: var(--Grey-green-1);
-    }
-    &__section-paragraph {
-        color: var(--Grey-1);
-        font-weight: 100;
     }
 
     &__media-collage {
@@ -70,13 +64,13 @@
         padding-bottom: 50px;
         color: var(--White);
         background: var(--Grey-green-1);
-    }
-    &__facilities-head {
-        text-align: center;
-        color: var(--White);
-        font-weight: 300;
-        font-size: xxx-large;
-        margin-bottom: 100px;
+
+        &-head {
+            text-align: center;
+            color: var(--White);
+            font-weight: 300;
+            margin-bottom: 100px;
+        }
     }
     &__grid {
         @include grid-layout(4, 3);

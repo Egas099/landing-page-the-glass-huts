@@ -19,7 +19,9 @@
     cursor: pointer;
 
     &-primary {
-        font-size: 17px;
+        font-family: "DIN Light";
+        font-weight: 300;
+        font-size: 1.4rem;
         border: none;
         color: var(--White);
         background-color: var(--Grey-green-1);
@@ -33,7 +35,7 @@
 
     &-transparent {
         border: 0.7px solid var(--White);
-        font-size: 14px;
+        font-size: 1.4rem;
         letter-spacing: 1px;
         background-color: transparent;
         color: var(--White);

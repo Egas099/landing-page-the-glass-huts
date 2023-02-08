@@ -1,4 +1,4 @@
-import { FC, useCallback, useState } from "react";
+import { FC, useState } from "react";
 import "./styles.scss";
 
 type Tab = {
@@ -35,7 +35,7 @@ const SectionWithTabs: FC<Props> = ({ sectionTitle, tabs }) => {
                     </span>
                 ))}
             </div>
-            <p className="section-with-tabs__paragraph">
+            <p>
                 {tabs[selectedTab].paragraph}
             </p>
         </section>

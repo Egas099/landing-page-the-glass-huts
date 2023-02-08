@@ -42,7 +42,7 @@ const price = "€3.200";
 const HomePage = () => {
     return (
         <div className="page">
-            <div className="page__intro-container">
+            <div className="page__intro">
                 <PanoramaWithContent
                     imageSource={images.intro}
                     maskColor="var(--Grey-1)"

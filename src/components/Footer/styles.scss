@@ -42,7 +42,6 @@
         color: var(--White);
         &::placeholder {
             color: var(--White);
-            opacity: 50%;
             font-style: italic;
         }
         &:focus {
@@ -50,16 +49,22 @@
         }
     }
 
-    &__newsletter-caption {
-        font-weight: 100;
-        opacity: 80%;
-        font-size: smaller;
+    &__newsletter {
+        &-header {
+            font-weight: 600;
+            font-size: 1.6rem;
+        }
+        &-caption {
+            opacity: 80%;
+            font-weight: 300;
+            font-size: 1.6rem;
+        }
     }
 
     &__copyright {
         opacity: 70%;
-        font-size: small;
-        font-weight: 100;
+        font-weight: 300;
+        font-size: 1.4rem;
     }
 
     &__second-column {
@@ -74,12 +79,13 @@
     }
 
     &__link {
+        font-family: "DIN Light";
         text-transform: uppercase;
-        text-align: end;
-        font-size: small;
+        text-align: center;
         text-decoration: none;
         color: var(--White);
         font-weight: 300;
+        font-size: 1.4rem;
     }
 
     &__payment-icons {

@@ -1,0 +1,17 @@
+@font-face {
+    font-family: "DIN Light";
+    src: local("DIN Pro Light"), local("DINPro-Light"),
+        url("http://localhost:3000/assets/fonts/DINPro-Light.woff")
+            format("woff");
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "DIN Medium";
+    src: local("DIN Pro Medium"), local("DINPro-Medium"),
+        url("http://localhost:3000/assets/fonts/DINPro-Medium.woff")
+            format("woff");
+    font-weight: 500;
+    font-style: normal;
+}

@@ -83,5 +83,5 @@ const thePracticalitiesSection = {
         },
     ],
     imagesSources: [images.breakfast1, images.breakfast2, images.dinner1],
-    sliderFromLeft: false,
+    sliderFromLeft: true,
 };

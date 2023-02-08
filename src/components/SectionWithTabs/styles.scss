@@ -1,8 +1,5 @@
 .section-with-tabs {
     &__head {
-        color: var(--Grey-green-1);
-        font-weight: 400;
-        font-size: 2.5em;
         margin-bottom: 50px;
     }
     &__tabs {
@@ -12,7 +9,8 @@
         margin-bottom: 50px;
     }
     &__tab {
-        font-size: 1.2em;
+        font-weight: 400;
+        font-size: 1.8rem;
         color: var(--Grey-green-1);
         cursor: pointer;
         font-style: italic;
@@ -20,10 +18,5 @@
         &_selected {
             text-decoration: underline;
         }
-    }
-    &__paragraph {
-        font-weight: 300;
-        color: var(--Grey-1);
-        line-height: 1.8;
     }
 }
