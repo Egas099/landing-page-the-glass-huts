@@ -1,4 +1,4 @@
-const IMAGES_BASE_URL = "http://localhost:3000/images";
+const IMAGES_BASE_URL = "http://localhost:3000/assets/images";
 
 export const images = {
     outside1: `${IMAGES_BASE_URL}/outside1.jpeg`,

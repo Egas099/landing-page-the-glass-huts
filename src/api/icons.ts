@@ -1,4 +1,4 @@
-const ICON_BASE_URL = "http://localhost:3000/images/icons";
+const ICON_BASE_URL = "http://localhost:3000/assets/svg";
 
 export const icons = {
     bedding_and_towels: `${ICON_BASE_URL}/bedding_and_towels.svg`,
