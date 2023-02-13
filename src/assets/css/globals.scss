@@ -1,6 +1,7 @@
 @import "./fonts.scss";
 
 :root {
+    // colors
     --White: #ffffff;
     --Black: #000000;
     --Grey-1: #333333;
@@ -10,6 +11,17 @@
     --Grey-green-3: #adb1af;
     --Green-1: #41916d;
     --Red-1: #ff0000;
+
+    // spaces
+    --page-space-large: 10vw;
+    --page-space-small: 2vw;
+
+    // breakpoints
+    --breakpoints-small: 320px;
+    --breakpoints-small-medium: 600px;
+    --breakpoints-medium: 900px;
+    --breakpoints-medium-large: 1200px;
+    --breakpoints-large: 1800px;
 }
 
 html {
@@ -17,6 +29,7 @@ html {
 }
 
 body {
+    overflow-x: hidden;
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
         "Oxygen", "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans",

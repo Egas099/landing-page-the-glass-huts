@@ -7,7 +7,7 @@ const Geolocation = () => (
         allowFullScreen={true}
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
-        title="The Grass Huts"
+        title="The Glass Huts"
     />
 );
 

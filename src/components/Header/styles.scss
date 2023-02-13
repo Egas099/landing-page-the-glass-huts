@@ -1,9 +1,7 @@
 @import "../../assets/css/mixins.scss";
 
 .header {
-    @include page-side-paddings;
-
-    $header-height: 70px;
+    --header-height: 100px;
 
     position: sticky;
     top: 0;
@@ -13,12 +11,34 @@
     align-items: center;
     z-index: 1;
 
-    height: $header-height;
+    padding-left: var(--page-space-large);
+    padding-right: var(--page-space-small);
+
+    height: var(--header-height);
+
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
     background-color: var(--White);
 
+    &__logo {
+        fill: var(--Grey-1);
+    }
     &__button {
-        height: 80%;
-        width: 200px;
+        height: 60px;
+        width: 20vw;
+        max-width: 200px;
+    }
+    &__burger {
+        display: none;
+    }
+    @media (max-width: 767px) {
+        --header-height: 80px;
+
+        &__nav,
+        &__button {
+            display: none;
+        }
+        &__burger {
+            display: block;
+        }
     }
 }
