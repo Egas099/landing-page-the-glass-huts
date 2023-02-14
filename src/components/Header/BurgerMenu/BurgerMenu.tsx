@@ -4,7 +4,7 @@ import NavBar from "../NavBar/NavBar";
 import "./styles.scss";
 
 const BurgerMenu = () => {
-    const [isMenuOpened, setIsMenuOpened] = useState(true);
+    const [isMenuOpened, setIsMenuOpened] = useState(false);
 
     function toggleMenu() {
         setIsMenuOpened((prev) => !prev);

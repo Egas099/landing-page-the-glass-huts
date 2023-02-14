@@ -2,7 +2,7 @@
     &__menu {
         box-sizing: border-box;
         position: absolute;
-        top: calc(var(--header-height) + 1px);
+        top: calc(var(--app-header-height) + 1px);
         right: 1px;
         display: grid;
         flex-direction: column;
@@ -14,8 +14,8 @@
         border: 1px var(--Grey-2) solid;
         box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
 
-        @media (max-width: 480px) {
-            top: var(--header-height);
+        @media screen and (max-width: 480px) {
+            top: var(--app-header-height);
             right: 0;
             width: 100%;
         }

@@ -1,101 +1,172 @@
 @import "/src/assets/css/mixins.scss";
 
 .page {
-    $intro-height: 100vh;
-    $book-button-shift: 45px;
-
     &__intro {
-        height: $intro-height;
-        margin-bottom: $book-button-shift;
+        --book-button-height: 100px;
+        --intro-height: 100vh;
+        @media screen and (max-width: 767px) {
+            --intro-height: 90vh;
+        }
+
+        box-sizing: border-box;
+        height: var(--intro-height);
+        margin-bottom: calc(var(--book-button-height) / 2);
 
         &-section {
-            @include page-side-margins;
+            padding: 0 var(--page-space-large);
             display: flex;
-            text-align: end;
             flex-direction: column;
             align-items: flex-end;
             padding-top: 40px;
+            text-align: end;
             color: var(--White);
+
+            @media screen and (max-width: 767px) {
+                padding-top: 0;
+            }
+            &-head {
+                margin-bottom: 0;
+            }
+            &-paragraph {
+                width: max(200px, 30%);
+                text-align: center;
+                font-weight: 100;
+                font-size: 2rem;
+                color: var(--White);
+            }
         }
-        &-head {
-            margin-bottom: 0;
-        }
-        &-paragraph {
-            text-align: center;
-            width: max(200px, 30%);
-            font-weight: 100;
-            font-size: 2rem;
-            color: var(--White);
+        &-book-button {
+            position: absolute;
+            margin-left: var(--page-space-large);
+            bottom: calc(var(--book-button-height) / 2 * (-1));
+            width: 350px;
+            height: var(--book-button-height);
+
+            @media screen and (max-width: 767px) {
+                position: absolute;
+                bottom: 0;
+                margin-left: 0;
+                width: 100%;
+            }
         }
     }
 
-    &__book-button {
-        @include page-side-margins;
-        position: absolute;
-        bottom: -$book-button-shift;
-        width: 350px;
-    }
-
-    &__section {
-        @include page-side-margins;
-        @include page-vertical-margins;
-        @include grid-layout;
+    &__cabins-section {
+        margin: var(--page-space-large);
+        display: grid;
+        grid-template-columns: 1fr 1fr;
         gap: 10vw;
+        @media screen and (max-width: 1024px) {
+            display: flex;
+            flex-direction: column;
+            gap: 4vw;
+        }
+
+        &-image {
+            @media screen and (max-width: 1024px) {
+                display: none;
+            }
+        }
+        &-slider {
+            display: none;
+            @media screen and (max-width: 1024px) {
+                display: block;
+            }
+        }
     }
 
     &__media-collage {
-        @include page-vertical-margins;
         @include grid-layout(3);
-        gap: 30px;
-        padding: 0 30px;
+        gap: var(--page-space-small);
+        margin: var(--page-space-large) var(--page-space-small);
+        @media screen and (max-width: 1024px) {
+            display: none;
+        }
     }
 
     &__geolocation {
         @include grid-layout;
-        background: #e9ece0;
-    }
-    &__about-forest {
-        padding: 10vw;
+        background-color: var(--Grey-green-4);
+        @media screen and (max-width: 1024px) {
+            display: flex;
+            flex-direction: column-reverse;
+        }
+
+        &-map {
+            display: flex;
+            flex-direction: column;
+            min-height: 40vh;
+        }
+        &-about {
+            padding: 10vh var(--page-space-large);
+            @media screen and (max-width: 767px) {
+                padding: 10vh var(--page-space-large);
+            }
+        }
     }
 
     &__facilities {
-        @include page-side-paddings;
-        padding-top: 50px;
-        padding-bottom: 50px;
+        padding: var(--page-space-large);
         color: var(--White);
-        background: var(--Grey-green-1);
+        background-color: var(--Grey-green-1);
 
         &-head {
+            margin-bottom: var(--page-space-large);
+
             text-align: center;
             color: var(--White);
             font-weight: 300;
-            margin-bottom: 100px;
         }
-    }
-    &__grid {
-        @include grid-layout(4, 3);
+        &-grid {
+            @include grid-layout(4, 3);
+            grid-auto-rows: 1fr;
+            gap: var(--page-space-small);
+
+            @media screen and (max-width: 1024px) {
+                grid-template-columns: repeat(3, 1fr);
+            }
+            @media screen and (max-width: 767px) {
+                grid-template-columns: repeat(2, 1fr);
+            }
+            @media screen and (max-width: 400px) {
+                grid-template-columns: 1fr;
+                gap: 5px;
+            }
+        }
     }
 
     &__about {
-        position: relative;
         @include grid-layout;
-        height: 80vh;
-    }
-    &__more-button {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        border-radius: 50%;
-        height: 150px;
-        width: 150px;
-        overflow: hidden;
+        position: relative;
+        min-height: 80vh;
+        @media screen and (max-width: 1024px) {
+            grid-template-columns: 1fr;
+        }
+
+        &-more-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            height: 150px;
+            width: 150px;
+            overflow: hidden;
+        }
     }
 
     &__contacts {
-        @include page-side-margins;
-        @include page-vertical-margins;
         @include grid-layout;
-        gap: 10vw;
+        margin: var(--page-space-large);
+        gap: var(--page-space-large);
+
+        @media screen and (max-width: 767px) {
+            text-align: center;
+            grid-template-columns: 1fr;
+        }
+
+        &-book-button {
+            height: 100px;
+        }
     }
 }

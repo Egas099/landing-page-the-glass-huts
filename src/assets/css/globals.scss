@@ -9,12 +9,17 @@
     --Grey-green-1: #5b6460;
     --Grey-green-2: #7b837f;
     --Grey-green-3: #adb1af;
+    --Grey-green-4: #e9ece0;
     --Green-1: #41916d;
     --Red-1: #ff0000;
 
     // spaces
     --page-space-large: 10vw;
     --page-space-small: 2vw;
+    @media screen and (max-width: 480px) {
+        --page-space-large: 24px;
+        --page-space-small: 24px;
+    }
 
     // breakpoints
     --breakpoints-small: 320px;

@@ -4,7 +4,7 @@
 
     &[open] {
         border-color: transparent;
-        background: #e9ece0;
+        background-color: var(--Grey-green-4);
     }
 
     &[open] &__summary-icon {
@@ -34,7 +34,7 @@
             height: 34px;
             padding: 5px 5px;
             border-radius: 50%;
-            background: #e9ece0;
+            background-color: var(--Grey-green-4);
             cursor: pointer;
         }
     }
