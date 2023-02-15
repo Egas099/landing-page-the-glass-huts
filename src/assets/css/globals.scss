@@ -16,6 +16,12 @@
     // spaces
     --page-space-large: 10vw;
     --page-space-small: 2vw;
+    @media screen and (max-width: 1024px) {
+        --page-space-large: 8vw;
+    }
+    @media screen and (max-width: 767px) {
+        --page-space-large: 5vw;
+    }
     @media screen and (max-width: 480px) {
         --page-space-large: 24px;
         --page-space-small: 24px;
@@ -23,10 +29,10 @@
 
     // breakpoints
     --breakpoints-small: 320px;
-    --breakpoints-small-medium: 600px;
-    --breakpoints-medium: 900px;
-    --breakpoints-medium-large: 1200px;
-    --breakpoints-large: 1800px;
+    --breakpoints-small-medium: 480px;
+    --breakpoints-medium: 767px;
+    --breakpoints-medium-large: 1024px;
+    --breakpoints-large: 1200px;
 }
 
 html {

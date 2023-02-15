@@ -5,40 +5,37 @@ import { RightArrow } from "../../assets/images/svg/RightArrow";
 import { Visa } from "../../assets/images/svg/Visa";
 import "./styles.scss";
 
-const newsletterTitle = "Newsletter";
-const newsletterCaption =
-    "Sign up to our newsletter for special things and receive 10% off your next order.";
-const copyright = "© 2021 The Glass Huts";
-const links = [
-    { to: "/", text: "Term and conditions" },
-    { to: "/", text: "Cancellation policy" },
-    { to: "/", text: "Privacy policy" },
-];
-
 const Footer = () => {
     return (
         <footer className="footer">
-            <div className="footer__first-column">
-                <span className="footer__newsletter-header">{newsletterTitle}</span>
+            <div className="footer__cell">
+                <span className="footer__newsletter-header">
+                    {newsletterTitle}
+                </span>
                 <div>
                     <div className="footer__input-with-arrow">
                         <input
-                            className="footer__input-email"
+                            className="footer__input-with-arrow-email"
                             placeholder="Email address"
                         />
-                        <RightArrow />
+                        <div className="footer__input-with-arrow-arrow">
+                            <RightArrow />
+                        </div>
                     </div>
                     <hr />
                     <span className="footer__newsletter-caption">
                         {newsletterCaption}
                     </span>
                 </div>
-                <span className="footer__copyright">{copyright}</span>
             </div>
-            <div className="footer__second-column">
-                <div className="footer__links">
+            <div className="footer__cell">
+                <div className="footer__faq-links">
                     {links.map(({ text, to }, index) => (
-                        <a className="footer__link" href={to} key={index}>
+                        <a
+                            className="footer__faq-links-link"
+                            href={to}
+                            key={index}
+                        >
                             {text}
                         </a>
                     ))}
@@ -50,8 +47,19 @@ const Footer = () => {
                     <BankTransfer />
                 </div>
             </div>
+            <span className="footer__cell footer__copyright">{copyright}</span>
         </footer>
     );
 };
 
 export default Footer;
+
+const newsletterTitle = "Newsletter";
+const newsletterCaption =
+    "Sign up to our newsletter for special things and receive 10% off your next order.";
+const copyright = "© 2021 The Glass Huts";
+const links = [
+    { to: "/", text: "Term and conditions" },
+    { to: "/", text: "Cancellation policy" },
+    { to: "/", text: "Privacy policy" },
+];

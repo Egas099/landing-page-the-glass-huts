@@ -1,51 +1,26 @@
 @import "../../assets/css/mixins.scss";
 
-@mixin column {
-    width: 50%;
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    flex-grow: 0;
-}
-
 .footer {
-    @include page-side-paddings;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: clamp(0px, var(--page-space-large), 50px);
+    align-content: center;
 
-    $vertical-paddings: 8vw;
-
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    gap: clamp(0px, 10vw, 50px);
-
-    padding-top: $vertical-paddings;
-    padding-bottom: $vertical-paddings;
+    padding: var(--page-space-large);
 
     color: var(--White);
     background-color: var(--Grey-green-1);
 
-    &__first-column {
-        @include column;
-        align-items: flex-start;
+    @media screen and (max-width: 767px) {
+        grid-template-columns: 1fr;
     }
 
-    &__input-with-arrow {
+    &__cell {
         display: flex;
-        flex-direction: row;
-        align-items: center;
-        justify-content: space-between;
-    }
-
-    &__input-email {
-        background-color: transparent;
-        border: none;
-        color: var(--White);
-        &::placeholder {
-            color: var(--White);
-            font-style: italic;
-        }
-        &:focus {
-            outline: none;
+        flex-direction: column;
+        gap: 24px;
+        @media screen and (max-width: 767px) {
+            align-items: center;
         }
     }
 
@@ -61,37 +36,57 @@
         }
     }
 
-    &__copyright {
-        opacity: 70%;
-        font-weight: 300;
-        font-size: 1.4rem;
-    }
-
-    &__second-column {
-        @include column;
-        align-items: flex-end;
-    }
-
-    &__links {
+    &__input-with-arrow {
         display: flex;
         flex-direction: row;
-        gap: 10px;
+        align-items: center;
+
+        &-email {
+            flex-grow: 1;
+            border: none;
+            background-color: transparent;
+            color: var(--White);
+            &::placeholder {
+                color: var(--White);
+                font-style: italic;
+            }
+            &:focus {
+                outline: none;
+            }
+        }
+        &-arrow {
+            fill: var(--Grey-green-4);
+        }
     }
 
-    &__link {
-        font-family: "DIN Light";
-        text-transform: uppercase;
-        text-align: center;
-        text-decoration: none;
-        color: var(--White);
-        font-weight: 300;
-        font-size: 1.4rem;
+    &__faq-links {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 24px;
+
+        &-link {
+            font-family: "DIN Light";
+            text-transform: uppercase;
+            text-align: center;
+            text-decoration: none;
+            color: var(--White);
+            font-weight: 300;
+            font-size: 1.4rem;
+        }
     }
 
     &__payment-icons {
+        fill: var(--Grey-green-4);
         display: flex;
         align-items: center;
         justify-content: center;
         gap: 40px;
+    }
+
+    &__copyright {
+        opacity: 70%;
+        font-weight: 300;
+        font-size: 1.4rem;
     }
 }
