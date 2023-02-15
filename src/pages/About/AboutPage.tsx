@@ -19,7 +19,6 @@ const AboutPage = () => {
             <section className="about-page__panorama">
                 <PanoramaWithContent
                     imageSource={images.peopleInside}
-                    maskColor="var(--Grey-1)"
                     maskOpacity={0.6}
                 >
                     <h1 className="about-page__panorama-head">About Us</h1>

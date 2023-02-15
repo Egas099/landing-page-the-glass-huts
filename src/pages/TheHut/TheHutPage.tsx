@@ -9,7 +9,6 @@ const TheHutPage = () => {
             <div className="hut-page__panorama">
                 <PanoramaWithContent
                     imageSource={images.insidePanorama}
-                    maskColor="var(--Grey-1)"
                     maskOpacity={0.7}
                 >
                     <h1 className="hut-page__panorama-head">The Hut</h1>
