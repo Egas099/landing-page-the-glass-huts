@@ -5,7 +5,7 @@ import "./styles.scss";
 const BookingPage = () => {
     return (
         <div className="booking-page">
-            <div>
+            <div className="booking-page__sections">
                 <section className="booking-page__catalog">
                     <h2 className="booking-page__section-head booking-page__section-head-main">
                         Choose Additional Services
@@ -46,9 +46,9 @@ const BookingPage = () => {
                     </p>
                 </section>
             </div>
-            <div className="booking-page__widget">
+            <aside>
                 <BookingWidget />
-            </div>
+            </aside>
         </div>
     );
 };

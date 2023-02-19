@@ -45,7 +45,7 @@ const AboutPage = () => {
                 </h2>
                 <div className="about-page__collage-images">
                     <Image src={images.hutPicture} height="100%" />
-                    <div className="about-page__collage-images-box">
+                    <div className="about-page__collage-images-wide">
                         <Image src={images.areaPanorama} height="100%" />
                     </div>
                     <Image src={images.womanPaintHut} height="100%" />

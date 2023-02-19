@@ -19,7 +19,7 @@ const ImageSliderWithSectionWithTabs: FC<Props> = ({
     return (
         <section
             className={`image-slider-with-section-with-tabs ${
-                sliderFromLeft ? "" : "reverse"
+                sliderFromLeft ? "obverse" : "reverse"
             }`}
         >
             <div

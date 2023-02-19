@@ -20,12 +20,20 @@
     }
 
     &__section {
-        @include page-side-margins;
-        @include page-vertical-margins;
+        padding: var(--page-space-large);
         @include grid-layout;
 
+        @media screen and (max-width: 1024px) {
+            display: flex;
+            flex-direction: column-reverse;
+            gap: var(--page-space-large);
+        }
+
         &-text {
-            padding-left: 20vh;
+            padding-left: var(--page-space-large);
+            @media screen and (max-width: 1024px) {
+                padding-left: 0;
+            }
         }
         &-citation {
             font-weight: 400;
@@ -42,50 +50,82 @@
     }
 
     &__collage {
+        padding: 0 var(--page-space-small);
         &-head {
             max-width: 500px;
             margin: auto;
         }
         &-images {
-            @include page-vertical-margins;
+            margin: var(--page-space-large) 0;
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            grid-template-rows: 1fr 1fr;
+            grid-auto-flow: dense;
+            grid-auto-rows: 1fr;
             gap: 20px;
-            padding: 0 30px;
-            &-box {
+
+            @media screen and (max-width: 1024px) {
+                grid-template-columns: 1fr 1fr;
+            }
+            @media screen and (max-width: 600px) {
+                grid-auto-rows: 40vh;
+                grid-template-columns: 1fr;
+            }
+            &-wide {
                 grid-column: 2 / 4;
+                @media screen and (max-width: 1024px) {
+                    grid-column: 1 / 3;
+                }
+                @media screen and (max-width: 600px) {
+                    grid-column: 1;
+                    display: none;
+                }
             }
         }
         &-text-box {
             display: flex;
             flex-direction: column;
             justify-content: center;
-            padding: 10vh;
+            padding: calc(5vw + 5vh);
             font-weight: 400;
             font-size: 2rem;
             line-height: 36px;
             font-style: italic;
             background-color: var(--Grey-green-4);
             color: var(--Grey-1);
+            @media screen and (max-width: 1200px) {
+                padding: var(--page-space-medium);
+            }
+            @media screen and (max-width: 1024px) {
+                padding: var(--page-space-large);
+            }
+            @media screen and (max-width: 767px) {
+                padding: var(--page-space-medium);
+            }
         }
     }
 
     &__contacts {
-        @include page-side-margins;
-        @include page-vertical-margins;
+        margin: var(--page-space-medium) var(--page-space-large);
 
         &-head {
-            margin-bottom: 15vh;
+            @media screen and (max-width: 767px) {
+                text-align: center;
+            }
         }
         &-box {
             display: grid;
             grid-template-columns: 2fr 3fr;
+            gap: var(--page-space-small);
+            @media screen and (max-width: 767px) {
+                grid-template-columns: 1fr;
+                text-align: center;
+                gap: var(--page-space-medium);
+            }
         }
     }
 
     &__from-love {
-        @include page-vertical-margins;
+        margin: var(--page-space-large);
         display: flex;
         flex-direction: column;
         align-items: center;

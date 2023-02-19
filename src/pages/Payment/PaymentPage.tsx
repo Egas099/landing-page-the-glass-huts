@@ -8,7 +8,7 @@ import "./styles.scss";
 const PaymentPage = () => {
     return (
         <div className="payment-page">
-            <form className="">
+            <form className="payment-page__payment-form">
                 <div className="">
                     <h2 className="payment-page__section-head">
                         Personal Information
@@ -61,7 +61,7 @@ const PaymentPage = () => {
                     </div>
                 </div>
             </form>
-            <div className="">
+            <div className="payment-page__aside">
                 <BookingWidget />
             </div>
         </div>

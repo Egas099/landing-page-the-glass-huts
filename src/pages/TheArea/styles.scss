@@ -1,5 +1,3 @@
-@import "/src/assets/css/mixins.scss";
-
 .area-page {
     &__panorama {
         height: 50vh;
@@ -30,15 +28,20 @@
     }
 
     &__vesterborg {
-        @include page-side-margins;
-        @include page-vertical-margins;
-
         display: grid;
         grid-template-columns: 1fr 1fr;
+        margin: var(--page-space-large);
+        @media screen and (max-width: 1024px) {
+            display: flex;
+            flex-direction: column-reverse;
+        }
 
         &-section {
-            padding-left: 10vw;
+            padding-left: var(--page-space-large);
             padding-bottom: 40px;
+            @media screen and (max-width: 1024px) {
+                padding-left: 0;
+            }
 
             &-sub-head {
                 font-weight: 400;
@@ -55,15 +58,19 @@
     }
 
     &__map {
-        @include page-side-margins;
-        @include page-vertical-margins;
         display: grid;
         grid-template-columns: 1fr 1fr;
         gap: 10vh;
+        margin: var(--page-space-large);
+
+        @media screen and (max-width: 1024px) {
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     &__sections-head {
-        @include page-side-margins;
+        margin: 0 var(--page-space-large);
         margin-top: 0;
         margin-bottom: 0;
     }

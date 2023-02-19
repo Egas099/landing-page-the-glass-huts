@@ -1,34 +1,51 @@
-@import "../../assets/css/mixins.scss";
-
 @mixin section-with-tabs {
     box-sizing: border-box;
     width: 50%;
     padding-bottom: 40px;
+
+    @media screen and (max-width: 1024px) {
+        width: 100%;
+    }
+}
+
+.obverse {
+    flex-direction: row;
+}
+.reverse {
+    flex-direction: row-reverse;
 }
 
 .image-slider-with-section-with-tabs {
     box-sizing: border-box;
     display: flex;
-    flex-direction: row;
-    @include page-vertical-margins;
-    @include page-side-margins;
+    margin: var(--page-space-large);
     min-height: 70vh;
+
+    @media screen and (max-width: 1024px) {
+        flex-direction: column;
+    }
 
     &__left-section {
         @include section-with-tabs;
-        padding-right: 10vw;
+        padding-right: var(--page-space-large);
+        @media screen and (max-width: 1024px) {
+            padding-right: 0;
+        }
     }
     &__right-section {
         @include section-with-tabs;
-        padding-left: 10vw;
+        padding-left: var(--page-space-large);
+        @media screen and (max-width: 1024px) {
+            padding-left: 0;
+        }
     }
     &__slider {
         box-sizing: border-box;
-        max-height: 100vh;
+        max-height: min(80vh, 100%);
         width: 50%;
-    }
-}
 
-.reverse {
-    flex-direction: row-reverse;
+        @media screen and (max-width: 1024px) {
+            width: 100%;
+        }
+    }
 }

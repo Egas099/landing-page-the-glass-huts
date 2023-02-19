@@ -1,22 +1,26 @@
-@import "/src/assets/css/mixins.scss";
-
 .booking-page {
-    margin: $large-page-gap;
-    margin-right: $small-page-gap;
     display: grid;
     grid-template-columns: 2fr 1fr;
-    column-gap: $large-page-gap;
+    gap: var(--page-space-large);
+    margin: var(--page-space-medium) var(--page-space-small)
+        var(--page-space-large) var(--page-space-large);
+    @media screen and (max-width: 1024px) {
+        grid-template-columns: 1fr;
+        margin-right: var(--page-space-large);
+    }
 
+    &__sections {
+        display: flex;
+        flex-direction: column;
+        gap: var(--page-space-medium);
+    }
     &__section-head {
-        margin-top: 100px;
-
         font-weight: 600;
         font-size: 2.4rem;
         color: var(--Grey-green-1);
         border-bottom: 0.7px solid var(--Grey-green-1);
 
         &-main {
-            margin-top: 0;
             font-weight: 400;
         }
     }

@@ -1,13 +1,12 @@
-@import "/src/assets/css/mixins.scss";
-
 .faq-page {
     &__list {
-        @include page-side-paddings;
-        @include page-vertical-margins;
-        padding-right: 30vw;
+        padding: var(--page-space-medium) var(--page-space-large);
         display: flex;
         flex-direction: column;
         gap: 24px;
+        @media screen and (min-width: 1024px) {
+            padding-right: calc(var(--page-space-large) * 3);
+        }
     }
     &__details {
         transition: all 1s;

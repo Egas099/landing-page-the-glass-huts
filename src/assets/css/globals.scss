@@ -14,17 +14,20 @@
     --Red-1: #ff0000;
 
     // spaces
+    --page-space-small: max(2vw, 24px);
+    --page-space-medium: 8vmin;
     --page-space-large: 10vw;
-    --page-space-small: 2vw;
     @media screen and (max-width: 1024px) {
         --page-space-large: 8vw;
+        --page-space-medium: 8vmin;
     }
     @media screen and (max-width: 767px) {
         --page-space-large: 5vw;
+        --page-space-medium: 5vmin;
     }
     @media screen and (max-width: 480px) {
+        --page-space-medium: 24px;
         --page-space-large: 24px;
-        --page-space-small: 24px;
     }
 
     // breakpoints
