@@ -1,8 +1,8 @@
 import React from "react";
-import BookingWidget from "../../components/BookingWidget/BookingWidget";
 import Button from "../../components/Button/Button";
 import InputArea from "../../components/InputArea/InputArea";
 import InputField from "../../components/InputField/InputField";
+import PaymentWidget from "../../components/PaymentWidget/PaymentWidget";
 import "./styles.scss";
 
 const PaymentPage = () => {
@@ -62,7 +62,7 @@ const PaymentPage = () => {
                 </div>
             </form>
             <div className="payment-page__aside">
-                <BookingWidget />
+                <PaymentWidget />
             </div>
         </div>
     );

@@ -72,6 +72,9 @@
         &-button {
             height: 60px;
             width: 384px;
+            @media screen and (max-width: 480px) {
+                width: 100%;
+            }
         }
     }
     &__aside {
