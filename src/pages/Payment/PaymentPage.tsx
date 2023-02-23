@@ -1,8 +1,5 @@
-import React from "react";
-import Button from "../../components/Button/Button";
-import InputArea from "../../components/InputArea/InputArea";
-import InputField from "../../components/InputField/InputField";
-import PaymentWidget from "../../components/PaymentWidget/PaymentWidget";
+import { InputField, InputArea, Button } from "shared/ui";
+import PaymentWidget from "widgets/PaymentWidget/PaymentWidget";
 import "./styles.scss";
 
 const PaymentPage = () => {

@@ -1,4 +1,4 @@
-import FAQDetails from "../../components/FAQDetails/FAQDetails";
+import FAQDetails from "entities/FAQDetails";
 import "./styles.scss";
 
 const FAQPage = () => {

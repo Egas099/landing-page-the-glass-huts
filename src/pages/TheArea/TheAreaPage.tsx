@@ -1,19 +1,16 @@
-import { icons } from "../../api/icons";
-import { images } from "../../api/images";
-import Button from "../../components/Button/Button";
-import Geolocation from "../../components/Geolocation/Geolocation";
-import Image from "../../components/Image/Image";
-import ImageSlider from "../../components/ImageSlider/ImageSlider";
-import ImageSliderWithSectionWithTabs from "../../components/ImageSliderWithSectionWithTabs/ImageSliderWithSectionWithTabs";
-import PanoramaWithContent from "../../components/PanoramaWithContent/PanoramaWithContent";
+import { iconService, imageService } from "shared/api";
+
+import Geolocation from "entities/Geolocation";
+import ImageSliderWithSectionWithTabs from "widgets/ImageSliderWithSectionWithTabs/ImageSliderWithSectionWithTabs";
 import "./styles.scss";
+import { PanoramaWithContent, Button, ImageSlider } from "shared/ui";
 
 const TheAreaPage = () => {
     return (
         <div className="area-page">
             <div className="area-page__panorama">
                 <PanoramaWithContent
-                    imageSource={images.areaPanorama}
+                    imageSource={imageService.areaPanorama}
                     maskOpacity={0.5}
                 >
                     <h1 className="area-page__panorama-head">The Area</h1>
@@ -21,7 +18,11 @@ const TheAreaPage = () => {
                         className="area-page__panorama-location"
                         href="https://goo.gl/maps/5L37Z7CZYYJYrkey9"
                     >
-                        <Image src={icons.geopoint} width="17px" />
+                        <img
+                            src={iconService.geopoint}
+                            width="17px"
+                            alt="location"
+                        />
                         Vesterborg, Denmark
                     </a>
                     <div className="area-page__panorama-button">
@@ -47,7 +48,7 @@ const TheAreaPage = () => {
                 <h2 className="area-page__map-head">
                     Lorem ipsum dolor sit amet, consectetur adipiscing...
                 </h2>
-                <Image src={images.map} />
+                <img src={imageService.map} alt="map" />
             </div>
             <h2 className="area-page__sections-head">Activities</h2>
             <ImageSliderWithSectionWithTabs {...restaurantsAndShopping} />
@@ -68,7 +69,7 @@ const vesterborg = {
     subHeader: "Lorem ipsum dolor sit amet, consectetur adipiscing...",
     paragraph:
         "Løvtag’s three exclusive and comfortable cabins, Et, Ro and Ly, are designed by architect Sigurd Larsen. They all have an open space with a double bed, a double sofa bed, kitchen, separate toilet and an outdoor shower. On the roof, surrounded by treetops, there is a terrace, which is about nine meters above ground.",
-    imagesSources: [images.nature2],
+    imagesSources: [imageService.nature2],
 };
 const restaurantsAndShopping = {
     sectionTitle: "Restaurants & shopping",
@@ -84,7 +85,7 @@ const restaurantsAndShopping = {
                 "Løvtag’s three exclusive and comfortable cabins, Et, Ro and Ly, are designed by architect Sigurd Larsen.",
         },
     ],
-    imagesSources: [images.restaurant1],
+    imagesSources: [imageService.restaurant1],
     sliderFromLeft: false,
 };
 const experiencesInNature = {
@@ -101,7 +102,7 @@ const experiencesInNature = {
                 "Løvtag’s three exclusive and comfortable cabins, Et, Ro and Ly, are designed by architect Sigurd Larsen. They all have an open space with a double bed, a double sofa bed, kitchen, separate toilet and an outdoor shower. On the roof, surrounded by treetops, there is a terrace, which is about nine meters above ground. The cottages are built around tall, old trees that go through the entire cottage from floor to ceiling.",
         },
     ],
-    imagesSources: [images.nature1],
+    imagesSources: [imageService.nature1],
     sliderFromLeft: true,
 };
 const goForDrive = {
@@ -118,7 +119,7 @@ const goForDrive = {
                 "Løvtag’s three exclusive and comfortable cabins, Et, Ro and Ly, are designed by architect Sigurd Larsen. They all have an open space with a double bed, a double sofa bed, kitchen, separate toilet and an outdoor shower. On the roof, surrounded by treetops, there is a terrace, which is about nine meters above ground. The cottages are built around tall, old trees that go through the entire cottage from floor to ceiling.",
         },
     ],
-    imagesSources: [images.road1],
+    imagesSources: [imageService.road1],
     sliderFromLeft: false,
 };
 const smallTownCharm = {
@@ -135,6 +136,6 @@ const smallTownCharm = {
                 "Løvtag’s three exclusive and comfortable cabins, Et, Ro and Ly, are designed by architect Sigurd Larsen. They all have an open space with a double bed, a double sofa bed, kitchen, separate toilet and an outdoor shower. On the roof, surrounded by treetops, there is a terrace, which is about nine meters above ground. The cottages are built around tall, old trees that go through the entire cottage from floor to ceiling.",
         },
     ],
-    imagesSources: [images.town1],
+    imagesSources: [imageService.town1],
     sliderFromLeft: true,
 };

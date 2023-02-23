@@ -1,13 +1,14 @@
-import { icons } from "../../api/icons";
-import { images } from "../../api/images";
-import Button from "../../components/Button/Button";
-import ButtonWithPrice from "../../components/ButtonWithPrice/ButtonWithPrice";
-import Contacts from "../../components/Contacts/Contacts";
-import Geolocation from "../../components/Geolocation/Geolocation";
-import IconWithCaption from "../../components/IconWithCaption/IconWithCaption";
-import Image from "../../components/Image/Image";
-import ImageSlider from "../../components/ImageSlider/ImageSlider";
-import PanoramaWithContent from "../../components/PanoramaWithContent/PanoramaWithContent";
+import ButtonWithPrice from "entities/ButtonWithPrice";
+import Contacts from "entities/Contacts";
+import { iconService, imageService } from "shared/api";
+
+import Geolocation from "entities/Geolocation";
+import {
+    PanoramaWithContent,
+    ImageSlider,
+    IconWithCaption,
+    Button,
+} from "shared/ui";
 import "./styles.scss";
 
 const HomePage = () => {
@@ -15,7 +16,7 @@ const HomePage = () => {
         <div className="page">
             <div className="page__intro">
                 <PanoramaWithContent
-                    imageSource={images.intro}
+                    imageSource={imageService.intro}
                     maskOpacity={0.35}
                 >
                     <section className="page__intro-section">
@@ -37,8 +38,8 @@ const HomePage = () => {
                     <p>{theCabinsSection.paragraph}</p>
                 </div>
                 <div className="page__cabins-section-image">
-                    <Image
-                        src={images.inside3}
+                    <img
+                        src={imageService.inside3}
                         alt="Inside The Hut"
                         height="100%"
                     />
@@ -46,18 +47,18 @@ const HomePage = () => {
                 <div className="page__cabins-section-slider">
                     <ImageSlider
                         imagesSources={[
-                            images.inside3,
-                            images.outside1,
-                            images.inside1,
-                            images.video,
+                            imageService.inside3,
+                            imageService.outside1,
+                            imageService.inside1,
+                            imageService.video,
                         ]}
                     />
                 </div>
             </section>
             <div className="page__media-collage">
-                <Image src={images.outside1} alt="The Hut" />
-                <Image src={images.inside1} alt="Inside the Hut" />
-                <Image src={images.video} alt="video" />
+                <img src={imageService.outside1} alt="The Hut" />
+                <img src={imageService.inside1} alt="Inside the Hut" />
+                <img src={imageService.video} alt="video" />
             </div>
             <div className="page__geolocation">
                 <div className="page__geolocation-map">
@@ -81,8 +82,8 @@ const HomePage = () => {
                 </div>
             </section>
             <div className="page__about">
-                <Image src={images.outside3} alt="Outside" height="100%" />
-                <Image src={images.inside2} alt="Inside" height="100%" />
+                <img src={imageService.outside3} alt="Outside" height="100%" />
+                <img src={imageService.inside2} alt="Inside" height="100%" />
                 <div className="page__about-more-button">
                     <Button text="More about us" />
                 </div>
@@ -95,7 +96,7 @@ const HomePage = () => {
                     <Contacts />
                 </div>
                 <div>
-                    <Image src={images.outside2} alt="Outside" />
+                    <img src={imageService.outside2} alt="Outside" />
                     <div className="page__contacts-book-button">
                         <ButtonWithPrice price={price} text="Book a hut" />
                     </div>
@@ -108,18 +109,21 @@ const HomePage = () => {
 export default HomePage;
 
 const facilities = [
-    { iconSrc: icons.fridge, caption: "Mini fridge" },
-    { iconSrc: icons.kitchen, caption: "Kitchenette" },
-    { iconSrc: icons.coffee_machine, caption: "Coffee machine" },
-    { iconSrc: icons.electric_tea_kettle, caption: "Electric tea kettle" },
-    { iconSrc: icons.parking, caption: "Parking" },
-    { iconSrc: icons.breathtaking_views, caption: "Breathtaking views" },
-    { iconSrc: icons.floor_heating, caption: "Floor heating" },
-    { iconSrc: icons.plug, caption: "230V" },
-    { iconSrc: icons.wifi, caption: "Wi-Fi" },
-    { iconSrc: icons.shower, caption: "Shower" },
-    { iconSrc: icons.flushing_toilets, caption: "Flushing toilets" },
-    { iconSrc: icons.bedding_and_towels, caption: "Bedding & towels" },
+    { iconSrc: iconService.fridge, caption: "Mini fridge" },
+    { iconSrc: iconService.kitchen, caption: "Kitchenette" },
+    { iconSrc: iconService.coffee_machine, caption: "Coffee machine" },
+    {
+        iconSrc: iconService.electric_tea_kettle,
+        caption: "Electric tea kettle",
+    },
+    { iconSrc: iconService.parking, caption: "Parking" },
+    { iconSrc: iconService.breathtaking_views, caption: "Breathtaking views" },
+    { iconSrc: iconService.floor_heating, caption: "Floor heating" },
+    { iconSrc: iconService.plug, caption: "230V" },
+    { iconSrc: iconService.wifi, caption: "Wi-Fi" },
+    { iconSrc: iconService.shower, caption: "Shower" },
+    { iconSrc: iconService.flushing_toilets, caption: "Flushing toilets" },
+    { iconSrc: iconService.bedding_and_towels, caption: "Bedding & towels" },
 ];
 const theCabinsSection = {
     head: "The Cabins",

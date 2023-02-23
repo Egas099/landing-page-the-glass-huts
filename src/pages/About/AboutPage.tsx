@@ -1,12 +1,7 @@
-import { icons } from "../../api/icons";
-import { images } from "../../api/images";
-import Button from "../../components/Button/Button";
-import ContactForm, {
-    ContactFormFields,
-} from "../../components/ContactForm/ContactForm";
-import Contacts from "../../components/Contacts/Contacts";
-import Image from "../../components/Image/Image";
-import PanoramaWithContent from "../../components/PanoramaWithContent/PanoramaWithContent";
+import Contacts from "entities/Contacts";
+import ContactForm, { ContactFormFields } from "features/ContactForm";
+import { iconService, imageService } from "shared/api";
+import { PanoramaWithContent, Button } from "shared/ui";
 import "./styles.scss";
 
 const AboutPage = () => {
@@ -18,18 +13,18 @@ const AboutPage = () => {
         <div className="about-page">
             <section className="about-page__panorama">
                 <PanoramaWithContent
-                    imageSource={images.peopleInside}
+                    imageSource={imageService.peopleInside}
                     maskOpacity={0.6}
                 >
                     <h1 className="about-page__panorama-head">About Us</h1>
                     <div className="about-page__panorama-buttons">
-                        <Button text="get directions" type="transparent" />
-                        <Button text="get directions" type="transparent" />
+                        <Button text="contact us" type="transparent" />
+                        <Button text="read FAQ" type="transparent" />
                     </div>
                 </PanoramaWithContent>
             </section>
             <div className="about-page__section">
-                <Image src={images.road2} height="100%" />
+                <img src={imageService.road2} height="100%" alt="Road" />
                 <div className="about-page__section-text">
                     <p className="about-page__section-citation">
                         {aboutSection.citation}
@@ -43,18 +38,20 @@ const AboutPage = () => {
                 <h2 className="about-page__collage-head">
                     Lorem ipsum dolor sit amet, consectetur adipiscing...
                 </h2>
-                <div className="about-page__collage-images">
-                    <Image src={images.hutPicture} height="100%" />
-                    <div className="about-page__collage-images-wide">
-                        <Image src={images.areaPanorama} height="100%" />
-                    </div>
-                    <Image src={images.womanPaintHut} height="100%" />
+                <div className="about-page__collage-images-grid">
+                    <img src={imageService.hutPicture} alt="The hut" />
+                    <img
+                        className="about-page__collage-images-grid-wide"
+                        src={imageService.areaPanorama}
+                        alt="The area"
+                    />
+                    <img src={imageService.womanPaintHut} alt="Painting" />
                     <div className="about-page__collage-text-box">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit,
                         sed do eiusmod tempor incididunt ut labore et dolore
                         magna aliqua.
                     </div>
-                    <Image src={images.hotTube} height="100%" />
+                    <img src={imageService.hotTube} alt="Hot tube" />
                 </div>
             </section>
             <section className="about-page__contacts">
@@ -71,7 +68,7 @@ const AboutPage = () => {
                     From Denmark, With love...
                 </span>
                 <div className="about-page__from-love-icon">
-                    <Image src={icons.heart} />
+                    <img src={iconService.heart} alt="Heart" />
                 </div>
             </div>
         </div>

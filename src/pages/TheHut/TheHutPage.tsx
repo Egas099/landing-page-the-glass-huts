@@ -1,6 +1,6 @@
-import { images } from "../../api/images";
-import ImageSliderWithSectionWithTabs from "../../components/ImageSliderWithSectionWithTabs/ImageSliderWithSectionWithTabs";
-import PanoramaWithContent from "../../components/PanoramaWithContent/PanoramaWithContent";
+import { imageService } from "shared/api";
+import { PanoramaWithContent } from "shared/ui";
+import ImageSliderWithSectionWithTabs from "widgets/ImageSliderWithSectionWithTabs/ImageSliderWithSectionWithTabs";
 import "./styles.scss";
 
 const TheHutPage = () => {
@@ -8,7 +8,7 @@ const TheHutPage = () => {
         <div className="hut-page">
             <div className="hut-page__panorama">
                 <PanoramaWithContent
-                    imageSource={images.insidePanorama}
+                    imageSource={imageService.insidePanorama}
                     maskOpacity={0.7}
                 >
                     <h1 className="hut-page__panorama-head">The Hut</h1>
@@ -38,10 +38,10 @@ const theOutsideSection = {
         },
     ],
     imagesSources: [
-        images.hotTube,
-        images.outside3,
-        images.outside2,
-        images.outside1,
+        imageService.hotTube,
+        imageService.outside3,
+        imageService.outside2,
+        imageService.outside1,
     ],
     sliderFromLeft: true,
 };
@@ -64,7 +64,11 @@ const theInsideSection = {
                 "Løvtag’s three exclusive and comfortable cabins, Et, Ro and Ly, are designed by architect Sigurd Larsen. They all have an open space with a double bed, a double sofa bed, kitchen, separate toilet and an outdoor shower. On the roof, surrounded by treetops, there is a terrace, which is about nine meters above ground. The cottages are built around tall, old trees that go through the entire cottage from floor to ceiling.",
         },
     ],
-    imagesSources: [images.inside1, images.inside3, images.inside2],
+    imagesSources: [
+        imageService.inside1,
+        imageService.inside3,
+        imageService.inside2,
+    ],
     sliderFromLeft: false,
 };
 const thePracticalitiesSection = {
@@ -81,6 +85,10 @@ const thePracticalitiesSection = {
                 "Løvtag’s three exclusive and comfortable cabins, Et, Ro and Ly, are designed by architect Sigurd Larsen. They all have an open space with a double bed, a double sofa bed, kitchen, separate toilet and an outdoor shower. On the roof, surrounded by treetops, there is a terrace, which is about nine meters above ground. The cottages are built around tall, old trees that go through the entire cottage from floor to ceiling.",
         },
     ],
-    imagesSources: [images.breakfast1, images.breakfast2, images.dinner1],
+    imagesSources: [
+        imageService.breakfast1,
+        imageService.breakfast2,
+        imageService.dinner1,
+    ],
     sliderFromLeft: true,
 };
