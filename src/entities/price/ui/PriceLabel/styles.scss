@@ -1,0 +1,16 @@
+.price-label {
+    &__value {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 2.5rem;
+        line-height: 40px;
+        color: var(--Grey-1);
+    }
+    &__period {
+        font-style: normal;
+        font-weight: 400;
+        font-size: 1.6rem;
+        line-height: 40px;
+        color: var(--Grey-1);
+    }
+}

@@ -1,0 +1,34 @@
+@mixin price-label {
+    font-weight: 300;
+    font-size: 1.2rem;
+    color: var(--Grey-1);
+}
+
+.price-box {
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+    width: 120px;
+    height: 100%;
+    padding: 15px;
+
+    font-family: "DIN Light";
+    background-color: var(--Grey-green-4);
+
+    &__label-from {
+        @include price-label;
+    }
+    &__value {
+        font-family: "DIN Light";
+        color: var(--Grey-1);
+        // font-weight: bold;
+        font-size: 2.2rem;
+        text-align: center;
+    }
+    &__label-unit {
+        @include price-label;
+        text-align: end;
+    }
+}

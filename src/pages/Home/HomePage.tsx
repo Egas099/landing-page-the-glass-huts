@@ -1,8 +1,5 @@
-import ButtonWithPrice from "entities/ButtonWithPrice";
-import Contacts from "entities/Contacts";
 import { iconService, imageService } from "shared/api";
 
-import Geolocation from "entities/Geolocation";
 import {
     PanoramaWithContent,
     ImageSlider,
@@ -10,6 +7,9 @@ import {
     Button,
 } from "shared/ui";
 import "./styles.scss";
+import { ContactList } from "entities/contacts";
+import { EmbeddedMap } from "entities/map";
+import ButtonWithPrice from "widgets/ButtonWithPrice";
 
 const HomePage = () => {
     return (
@@ -28,7 +28,7 @@ const HomePage = () => {
                         </p>
                     </section>
                     <div className="page__intro-book-button">
-                        <ButtonWithPrice price={price} text="Book now" />
+                        <ButtonWithPrice text="Book now" />
                     </div>
                 </PanoramaWithContent>
             </div>
@@ -62,7 +62,7 @@ const HomePage = () => {
             </div>
             <div className="page__geolocation">
                 <div className="page__geolocation-map">
-                    <Geolocation />
+                    <EmbeddedMap />
                 </div>
                 <section className="page__geolocation-about">
                     <h2>{theForestSection.head}</h2>
@@ -93,12 +93,12 @@ const HomePage = () => {
                     <h2 className="page__section-head">
                         Stay in touch with us
                     </h2>
-                    <Contacts />
+                    <ContactList />
                 </div>
                 <div>
                     <img src={imageService.outside2} alt="Outside" />
                     <div className="page__contacts-book-button">
-                        <ButtonWithPrice price={price} text="Book a hut" />
+                        <ButtonWithPrice text="Book a hut" />
                     </div>
                 </div>
             </div>

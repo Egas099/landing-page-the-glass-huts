@@ -6,12 +6,12 @@ type Props = {
     summary: string;
 };
 
-const FAQDetails: FC<PropsWithChildren<Props>> = ({ summary, children }) => {
+const Collapse: FC<PropsWithChildren<Props>> = ({ summary, children }) => {
     return (
-        <details className="faq-details">
-            <summary className="faq-details__summary">
+        <details className="collapse">
+            <summary className="collapse__summary">
                 {summary}
-                <div className="faq-details__summary-icon">
+                <div className="collapse__summary-icon">
                     <img
                         src={iconService.arrowDown}
                         width={"20px"}
@@ -19,9 +19,9 @@ const FAQDetails: FC<PropsWithChildren<Props>> = ({ summary, children }) => {
                     />
                 </div>
             </summary>
-            <div className={"faq-details__content"}>{children}</div>
+            <div className={"collapse__content"}>{children}</div>
         </details>
     );
 };
 
-export default FAQDetails;
+export default Collapse;

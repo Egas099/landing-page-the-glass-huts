@@ -1,13 +1,11 @@
+import { PriceLabel } from "entities/price";
 import { Button, InputField } from "shared/ui";
 import "./styles.scss";
 
 const BookingWidget = () => {
     return (
         <div className="booking-widget">
-            <span className="booking-widget__price">
-                <span className="booking-widget__price-value">3.200kr</span>
-                <span className="booking-widget__price-unit"> / night</span>
-            </span>
+            <PriceLabel />
             <div className="booking-widget__form">
                 <div className="booking-widget__form-element">
                     <span className="booking-widget__form-element-head">

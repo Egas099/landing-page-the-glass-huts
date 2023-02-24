@@ -1,4 +1,4 @@
-import Contacts from "entities/Contacts";
+import { ContactList } from "entities/contacts";
 import ContactForm, { ContactFormFields } from "features/ContactForm";
 import { iconService, imageService } from "shared/api";
 import { PanoramaWithContent, Button } from "shared/ui";
@@ -59,7 +59,7 @@ const AboutPage = () => {
                     Stay in touch with us
                 </h2>
                 <div className="about-page__contacts-box">
-                    <Contacts />
+                    <ContactList />
                     <ContactForm onSubmit={handleSubmit} />
                 </div>
             </section>

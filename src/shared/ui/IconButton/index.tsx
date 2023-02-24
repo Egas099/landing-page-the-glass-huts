@@ -7,7 +7,7 @@ type Props = {
     link: string;
 };
 
-const IconButton: FC<Props> = ({ iconSource, link, alternativeText }) => {
+export const IconButton: FC<Props> = ({ iconSource, link, alternativeText }) => {
     return (
         <a className="icon-button" href={link}>
             <img
@@ -19,5 +19,3 @@ const IconButton: FC<Props> = ({ iconSource, link, alternativeText }) => {
         </a>
     );
 };
-
-export default IconButton;

@@ -1,9 +1,9 @@
 import { iconService, imageService } from "shared/api";
 
-import Geolocation from "entities/Geolocation";
 import ImageSliderWithSectionWithTabs from "widgets/ImageSliderWithSectionWithTabs/ImageSliderWithSectionWithTabs";
 import "./styles.scss";
 import { PanoramaWithContent, Button, ImageSlider } from "shared/ui";
+import { EmbeddedMap } from "entities/map";
 
 const TheAreaPage = () => {
     return (
@@ -56,7 +56,7 @@ const TheAreaPage = () => {
             <ImageSliderWithSectionWithTabs {...goForDrive} />
             <ImageSliderWithSectionWithTabs {...smallTownCharm} />
             <div className="area-page__geolocation">
-                <Geolocation />
+                <EmbeddedMap />
             </div>
         </div>
     );
