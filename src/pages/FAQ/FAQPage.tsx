@@ -1,4 +1,4 @@
-import Collapse from "shared/ui/Collapse";
+import { Collapse } from "shared/ui";
 import "./styles.scss";
 
 const FAQPage = () => {

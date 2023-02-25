@@ -1,5 +1,5 @@
-import { FC, FormEvent, useCallback } from "react";
-import { InputField, Button } from "shared/ui";
+import { FormEvent, useCallback } from "react";
+import { InputField, Button, InputArea } from "shared/ui";
 import "./styles.scss";
 
 export interface ContactFormFields {
@@ -10,22 +10,16 @@ export interface ContactFormFields {
     message: string;
 }
 
-type Props = {
-    onSubmit: (contactFormFields: ContactFormFields) => void;
-};
-
-const ContactForm: FC<Props> = ({ onSubmit }) => {
-    const handleSubmit = useCallback(
-        (e: FormEvent<HTMLFormElement>) => {
-            e.preventDefault();
-            const form = new FormData(e.target as unknown as HTMLFormElement);
-            const contactFormFields = Array.from(
-                form
-            ) as unknown as ContactFormFields;
-            onSubmit(contactFormFields);
-        },
-        [onSubmit]
-    );
+const ContactForm = () => {
+    const handleSubmit = useCallback((e: FormEvent<HTMLFormElement>) => {
+        e.preventDefault();
+        const form = new FormData(e.target as unknown as HTMLFormElement);
+        const contactFormFields = Object.fromEntries(
+            form
+        ) as unknown as ContactFormFields;
+        console.log(contactFormFields);
+        alert("Message can not be sent.");
+    }, []);
 
     return (
         <form
@@ -48,7 +42,9 @@ const ContactForm: FC<Props> = ({ onSubmit }) => {
                 name="email"
             />
             <InputField placeholder="Subject" required name="subject" />
-            <InputField placeholder="Message" required name="message" />
+            <div className="contact-form__message">
+                <InputArea placeholder="Message" required name="message" />
+            </div>
             <div className="contact-form__submit-button">
                 <Button text="Send" formId="contact-form" />
             </div>

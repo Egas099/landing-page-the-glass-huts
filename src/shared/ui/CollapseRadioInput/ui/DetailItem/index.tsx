@@ -1,5 +1,5 @@
 import { FC } from "react";
-import RadioIcon from "../RadioIcon/RadioIcon";
+import RadioIcon from "../RadioIcon";
 import "./styles.scss";
 
 type Props = HeaderWithCaption & { onChange: () => void; checked: boolean };

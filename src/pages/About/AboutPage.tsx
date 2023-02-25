@@ -1,14 +1,10 @@
 import { ContactList } from "entities/contacts";
-import ContactForm, { ContactFormFields } from "features/ContactForm";
+import ContactForm from "features/ContactForm";
 import { iconService, imageService } from "shared/api";
 import { PanoramaWithContent, Button } from "shared/ui";
 import "./styles.scss";
 
 const AboutPage = () => {
-    const handleSubmit = (form: ContactFormFields) => {
-        console.log(form);
-    };
-
     return (
         <div className="about-page">
             <section className="about-page__panorama">
@@ -60,7 +56,7 @@ const AboutPage = () => {
                 </h2>
                 <div className="about-page__contacts-box">
                     <ContactList />
-                    <ContactForm onSubmit={handleSubmit} />
+                    <ContactForm />
                 </div>
             </section>
             <div className="about-page__from-love">

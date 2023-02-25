@@ -6,7 +6,7 @@ type Props = {
     summary: string;
 };
 
-const Collapse: FC<PropsWithChildren<Props>> = ({ summary, children }) => {
+export const Collapse: FC<PropsWithChildren<Props>> = ({ summary, children }) => {
     return (
         <details className="collapse">
             <summary className="collapse__summary">
@@ -23,5 +23,3 @@ const Collapse: FC<PropsWithChildren<Props>> = ({ summary, children }) => {
         </details>
     );
 };
-
-export default Collapse;

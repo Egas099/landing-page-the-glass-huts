@@ -1,15 +1,15 @@
-import { FC, PropsWithChildren, useState } from "react";
+import { FC, PropsWithChildren, useCallback, useState } from "react";
 import { iconService } from "shared/api";
-import DetailItem from "./DetailItem/DetailItem";
-import RadioIcon from "./RadioIcon/RadioIcon";
 import "./styles.scss";
+import DetailItem from "./ui/DetailItem";
+import RadioIcon from "./ui/RadioIcon";
 
 type Props = {
     summary: HeaderWithCaption;
     details?: HeaderWithCaption[];
 };
 
-const RadioDetails: FC<PropsWithChildren<Props>> = ({
+export const CollapseRadioInput: FC<PropsWithChildren<Props>> = ({
     summary,
     details = [],
 }) => {
@@ -21,7 +21,7 @@ const RadioDetails: FC<PropsWithChildren<Props>> = ({
             : [{ id: 0, checked: false }]
     );
 
-    function handleSummaryChecked() {
+    const handleSummaryChecked = useCallback(() => {
         setCheckedForm((prev) => {
             const someRadioChecked = prev.some(({ checked }) => checked);
             if (someRadioChecked) {
@@ -33,16 +33,15 @@ const RadioDetails: FC<PropsWithChildren<Props>> = ({
                 }));
             }
         });
-    }
-
-    function handleDetailChecked(index: number) {
+    }, []);
+    const handleDetailChecked = useCallback((index: number) => {
         setCheckedForm((prevForm) =>
             prevForm.map((radio) => ({
                 id: radio.id,
                 checked: radio.id === index ? !radio.checked : false,
             }))
         );
-    }
+    }, []);
 
     const isSummaryChecked = checkedForm.some((radio) => radio.checked);
 
@@ -80,7 +79,11 @@ const RadioDetails: FC<PropsWithChildren<Props>> = ({
                                     : ""
                             }`}
                         >
-                            <img src={iconService.arrowDown} width={"20px"} alt="Arrow"/>
+                            <img
+                                src={iconService.arrowDown}
+                                width={"20px"}
+                                alt="Arrow"
+                            />
                         </div>
                     </div>
                 ) : (
@@ -101,5 +104,3 @@ const RadioDetails: FC<PropsWithChildren<Props>> = ({
         </div>
     );
 };
-
-export default RadioDetails;

@@ -1,4 +1,4 @@
-import RadioDetails from "features/RadioDetails";
+import { CollapseRadioInput } from "shared/ui";
 import BookingWidget from "widgets/BookingWidget/BookingWidget";
 import "./styles.scss";
 
@@ -11,7 +11,7 @@ const BookingPage = () => {
                         Choose Additional Services
                     </h2>
                     {catalog.map((item, index) => (
-                        <RadioDetails {...item} key={index} />
+                        <CollapseRadioInput {...item} key={index} />
                     ))}
                 </section>
 
