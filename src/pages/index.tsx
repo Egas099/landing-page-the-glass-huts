@@ -5,7 +5,7 @@ import AboutPage from "./About/AboutPage";
 import BookingPage from "./Booking/BookingPage";
 import ErrorPage from "./ErrorPage/ErrorPage";
 import FAQPage from "./FAQ/FAQPage";
-import HomePage from "./Home/HomePage";
+import HomePage from "./Home";
 import PaymentPage from "./Payment/PaymentPage";
 import RootPage from "./Root/RootPage";
 import TheAreaPage from "./TheArea/TheAreaPage";
@@ -14,36 +14,36 @@ import TheHutPage from "./TheHut/TheHutPage";
 const router = createBrowserRouter([
     {
         path: BASE_URL,
-        element: RootPage(),
-        errorElement: ErrorPage(),
+        element: <RootPage />,
+        errorElement: <ErrorPage />,
         children: [
             {
                 path: ROUTES.HOME,
-                element: HomePage(),
+                element: <HomePage />,
             },
             {
                 path: ROUTES.BOOKING,
-                element: BookingPage(),
+                element: <BookingPage />,
             },
             {
                 path: ROUTES.PAYMENT,
-                element: PaymentPage(),
+                element: <PaymentPage />,
             },
             {
                 path: ROUTES.THE_HUT,
-                element: TheHutPage(),
+                element: <TheHutPage />,
             },
             {
                 path: ROUTES.THE_AREA,
-                element: TheAreaPage(),
+                element: <TheAreaPage />,
             },
             {
                 path: ROUTES.ABOUT,
-                element: AboutPage(),
+                element: <AboutPage />,
             },
             {
                 path: ROUTES.FAQ,
-                element: FAQPage(),
+                element: <FAQPage />,
             },
         ],
     },

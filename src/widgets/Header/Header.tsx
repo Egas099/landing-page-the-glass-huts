@@ -3,6 +3,7 @@ import NavBar from "./NavBar/NavBar";
 import BurgerMenu from "./BurgerMenu/BurgerMenu";
 import { Button } from "shared/ui";
 import "./styles.scss";
+import { LocaleSelect } from "features/LocaleSelect";
 
 const Header = () => {
     return (
@@ -13,6 +14,7 @@ const Header = () => {
             <div className="header__nav">
                 <NavBar direction="row" />
             </div>
+            <LocaleSelect />
             <div className="header__button">
                 <Button text="Book now" />
             </div>
