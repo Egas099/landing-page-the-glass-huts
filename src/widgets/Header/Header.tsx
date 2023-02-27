@@ -4,8 +4,11 @@ import BurgerMenu from "./BurgerMenu/BurgerMenu";
 import { Button } from "shared/ui";
 import "./styles.scss";
 import { LocaleSelect } from "features/LocaleSelect";
+import { useTranslation } from "react-i18next";
 
 const Header = () => {
+    const {t} = useTranslation()
+
     return (
         <header className="header">
             <a className="header__logo" href="/">
@@ -16,7 +19,7 @@ const Header = () => {
             </div>
             <LocaleSelect />
             <div className="header__button">
-                <Button text="Book now" />
+                <Button text={t("Book now")} />
             </div>
             <div className="header__burger">
                 <BurgerMenu />
