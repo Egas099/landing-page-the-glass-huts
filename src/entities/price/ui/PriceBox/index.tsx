@@ -1,13 +1,15 @@
 import { price } from "entities/price/model";
-import { FC, PropsWithChildren } from "react";
+import { Trans } from "react-i18next";
 import "./styles.scss";
 
-export const PriceBox: FC<PropsWithChildren> = () => {
+export const PriceBox = () => {
     return (
         <div className="price-box">
-            <span className="price-box__label-from">from</span>
-            <span className="price-box__value">{price}</span>
-            <span className="price-box__label-unit">per night</span>
+            <Trans>
+                <span className="price-box__label-from">from</span>
+                {{ price }}
+                <span className="price-box__label-unit">per night</span>
+            </Trans>
         </div>
     );
 };

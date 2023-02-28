@@ -2,7 +2,7 @@ import { FC } from "react";
 import "./styles.scss";
 
 type Props = {
-    placeholder?: string;
+    placeholder?: string | null;
     required?: boolean;
     name?: string;
 };

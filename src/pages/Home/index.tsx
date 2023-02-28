@@ -36,14 +36,14 @@ const HomePage = () => {
                         </p>
                     </section>
                     <div className="page__intro-book-button">
-                        <ButtonWithPrice text="Book now" />
+                        <ButtonWithPrice text={t("Book now")} />
                     </div>
                 </PanoramaWithContent>
             </div>
             <section className="page__cabins-section">
                 <div className="">
-                    <h2>{theCabinsSection.head}</h2>
-                    <p>{theCabinsSection.paragraph}</p>
+                    <h2>{t(theCabinsSection.head)}</h2>
+                    <p>{t(theCabinsSection.paragraph)}</p>
                 </div>
                 <div className="page__cabins-section-image">
                     <img
@@ -73,17 +73,17 @@ const HomePage = () => {
                     <EmbeddedMap />
                 </div>
                 <section className="page__geolocation-about">
-                    <h2>{theForestSection.head}</h2>
-                    <p>{theForestSection.paragraph}</p>
+                    <h2>{t(theForestSection.head)}</h2>
+                    <p>{t(theForestSection.paragraph)}</p>
                 </section>
             </div>
             <section className="page__facilities">
-                <h2 className="page__facilities-head">Facilities</h2>
+                <h2 className="page__facilities-head">{t("Facilities")}</h2>
                 <div className="page__facilities-grid">
                     {facilities.map(({ iconSrc, caption }) => (
                         <IconWithCaption
                             src={iconSrc}
-                            caption={caption}
+                            caption={t(caption)}
                             key={iconSrc}
                         />
                     ))}
@@ -93,20 +93,20 @@ const HomePage = () => {
                 <img src={imageService.outside3} alt="Outside" height="100%" />
                 <img src={imageService.inside2} alt="Inside" height="100%" />
                 <div className="page__about-more-button">
-                    <Button text="More about us" />
+                    <Button text={t("More about us")} />
                 </div>
             </div>
             <div className="page__contacts">
                 <div className="">
                     <h2 className="page__section-head">
-                        Stay in touch with us
+                        {t("Stay in touch with us")}
                     </h2>
                     <ContactList />
                 </div>
                 <div>
                     <img src={imageService.outside2} alt="Outside" />
                     <div className="page__contacts-book-button">
-                        <ButtonWithPrice text="Book a hut" />
+                        <ButtonWithPrice text={t("Book a hut")} />
                     </div>
                 </div>
             </div>

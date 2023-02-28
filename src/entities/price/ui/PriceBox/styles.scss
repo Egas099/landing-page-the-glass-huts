@@ -14,18 +14,16 @@
     height: 100%;
     padding: 15px;
 
-    font-family: "DIN Light";
     background-color: var(--Grey-green-4);
+
+    font-family: "DIN Light";
+    color: var(--Grey-1);
+    font-size: 2.2rem;
+    text-align: center;
 
     &__label-from {
         @include price-label;
-    }
-    &__value {
-        font-family: "DIN Light";
-        color: var(--Grey-1);
-        // font-weight: bold;
-        font-size: 2.2rem;
-        text-align: center;
+        text-align: start;
     }
     &__label-unit {
         @include price-label;

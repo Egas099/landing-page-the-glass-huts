@@ -1,9 +1,12 @@
+import { useTranslation } from "react-i18next";
 import { imageService } from "shared/api";
 import { PanoramaWithContent } from "shared/ui";
 import { ImageSliderWithSectionWithTabs } from "widgets";
 import "./styles.scss";
 
 const TheHutPage = () => {
+    const { t } = useTranslation()
+
     return (
         <div className="hut-page">
             <div className="hut-page__panorama">
@@ -11,7 +14,7 @@ const TheHutPage = () => {
                     imageSource={imageService.insidePanorama}
                     maskOpacity={0.7}
                 >
-                    <h1 className="hut-page__panorama-head">The Hut</h1>
+                    <h1 className="hut-page__panorama-head">{t("The Hut")}</h1>
                 </PanoramaWithContent>
             </div>
             <ImageSliderWithSectionWithTabs {...theOutsideSection} />

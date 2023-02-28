@@ -3,7 +3,7 @@ import "./styles.scss";
 
 type Props = {
     inputType?: HTMLInputTypeAttribute;
-    placeholder?: string;
+    placeholder?: string | null;
     required?: boolean;
     name?: string;
 };

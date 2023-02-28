@@ -1,4 +1,5 @@
 import { FormEvent, useCallback } from "react";
+import { useTranslation } from "react-i18next";
 import { InputField, Button, InputArea } from "shared/ui";
 import "./styles.scss";
 
@@ -11,6 +12,8 @@ export interface ContactFormFields {
 }
 
 const ContactForm = () => {
+    const { t } = useTranslation();
+
     const handleSubmit = useCallback((e: FormEvent<HTMLFormElement>) => {
         e.preventDefault();
         const form = new FormData(e.target as unknown as HTMLFormElement);
@@ -29,24 +32,28 @@ const ContactForm = () => {
         >
             <div className="contact-form__name">
                 <InputField
-                    placeholder="First name"
+                    placeholder={t("First name")}
                     required
                     name="first_name"
                 />
-                <InputField placeholder="Last name" required name="last_name" />
+                <InputField
+                    placeholder={t("Last name")}
+                    required
+                    name="last_name"
+                />
             </div>
             <InputField
-                placeholder="Email"
+                placeholder={t("Email")}
                 inputType="email"
                 required
                 name="email"
             />
-            <InputField placeholder="Subject" required name="subject" />
+            <InputField placeholder={t("Subject")} required name="subject" />
             <div className="contact-form__message">
-                <InputArea placeholder="Message" required name="message" />
+                <InputArea placeholder={t("Message")} required name="message" />
             </div>
             <div className="contact-form__submit-button">
-                <Button text="Send" formId="contact-form" />
+                <Button text={t("Send")} formId="contact-form" />
             </div>
         </form>
     );

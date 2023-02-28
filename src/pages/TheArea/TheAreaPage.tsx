@@ -4,8 +4,11 @@ import "./styles.scss";
 import { PanoramaWithContent, Button, ImageSlider } from "shared/ui";
 import { EmbeddedMap } from "entities/map";
 import { ImageSliderWithSectionWithTabs } from "widgets";
+import { useTranslation } from "react-i18next";
 
 const TheAreaPage = () => {
+    const { t } = useTranslation()
+    
     return (
         <div className="area-page">
             <div className="area-page__panorama">
@@ -13,7 +16,7 @@ const TheAreaPage = () => {
                     imageSource={imageService.areaPanorama}
                     maskOpacity={0.5}
                 >
-                    <h1 className="area-page__panorama-head">The Area</h1>
+                    <h1 className="area-page__panorama-head">{t("The Area")}</h1>
                     <a
                         className="area-page__panorama-location"
                         href="https://goo.gl/maps/5L37Z7CZYYJYrkey9"
@@ -23,10 +26,10 @@ const TheAreaPage = () => {
                             width="17px"
                             alt="location"
                         />
-                        Vesterborg, Denmark
+                        {t("Vesterborg, Denmark")}
                     </a>
                     <div className="area-page__panorama-button">
-                        <Button text="get directions" type="transparent" />
+                        <Button text={t("get directions")} type="transparent" />
                     </div>
                 </PanoramaWithContent>
             </div>
@@ -34,23 +37,23 @@ const TheAreaPage = () => {
                 <ImageSlider imagesSources={vesterborg.imagesSources} />
                 <div className="area-page__vesterborg-section">
                     <h2 className="area-page__vesterborg-section-head">
-                        {vesterborg.header}
+                        {t(vesterborg.header)}
                     </h2>
                     <span className="area-page__vesterborg-section-sub-head">
-                        {vesterborg.subHeader}
+                        {t(vesterborg.subHeader)}
                     </span>
                     <p className="area-page__vesterborg-section-paragraph">
-                        {vesterborg.paragraph}
+                        {t(vesterborg.paragraph)}
                     </p>
                 </div>
             </section>
             <div className="area-page__map">
                 <h2 className="area-page__map-head">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing...
+                    {t("Lorem ipsum dolor sit amet, consectetur adipiscing...")}
                 </h2>
                 <img src={imageService.map} alt="map" />
             </div>
-            <h2 className="area-page__sections-head">Activities</h2>
+            <h2 className="area-page__sections-head">{t("Activities")}</h2>
             <ImageSliderWithSectionWithTabs {...restaurantsAndShopping} />
             <ImageSliderWithSectionWithTabs {...experiencesInNature} />
             <ImageSliderWithSectionWithTabs {...goForDrive} />

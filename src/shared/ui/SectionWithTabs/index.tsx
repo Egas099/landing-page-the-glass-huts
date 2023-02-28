@@ -1,4 +1,5 @@
 import { FC, useState } from "react";
+import { useTranslation } from "react-i18next";
 import "./styles.scss";
 
 type Tab = {
@@ -12,6 +13,7 @@ type Props = {
 };
 
 export const SectionWithTabs: FC<Props> = ({ sectionTitle, tabs }) => {
+    const { t } = useTranslation();
     const [selectedTab, setSelectedTab] = useState(0);
     const isActiveTab = (index: number) => index === selectedTab;
 
@@ -31,11 +33,11 @@ export const SectionWithTabs: FC<Props> = ({ sectionTitle, tabs }) => {
                         onClick={() => setSelectedTab(index)}
                         key={index}
                     >
-                        {tab.header}
+                        {t(tab.header)}
                     </span>
                 ))}
             </div>
-            <p>{tabs[selectedTab].paragraph}</p>
+            <p>{t(tabs[selectedTab].paragraph)}</p>
         </section>
     );
 };

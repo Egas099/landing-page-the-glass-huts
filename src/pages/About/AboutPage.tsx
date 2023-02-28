@@ -1,10 +1,13 @@
 import { ContactList } from "entities/contacts";
 import ContactForm from "features/ContactForm";
+import { useTranslation } from "react-i18next";
 import { iconService, imageService } from "shared/api";
 import { PanoramaWithContent, Button } from "shared/ui";
 import "./styles.scss";
 
 const AboutPage = () => {
+    const { t } = useTranslation();
+
     return (
         <div className="about-page">
             <section className="about-page__panorama">
@@ -12,10 +15,12 @@ const AboutPage = () => {
                     imageSource={imageService.peopleInside}
                     maskOpacity={0.6}
                 >
-                    <h1 className="about-page__panorama-head">About Us</h1>
+                    <h1 className="about-page__panorama-head">
+                        {t("About Us")}
+                    </h1>
                     <div className="about-page__panorama-buttons">
-                        <Button text="contact us" type="transparent" />
-                        <Button text="read FAQ" type="transparent" />
+                        <Button text={t("contact us")} type="transparent" />
+                        <Button text={t("read FAQ")} type="transparent" />
                     </div>
                 </PanoramaWithContent>
             </section>
@@ -23,16 +28,16 @@ const AboutPage = () => {
                 <img src={imageService.road2} height="100%" alt="Road" />
                 <div className="about-page__section-text">
                     <p className="about-page__section-citation">
-                        {aboutSection.citation}
+                        {t(aboutSection.citation)}
                     </p>
                     <p className="about-page__section-paragraph">
-                        {aboutSection.paragraph}
+                        {t(aboutSection.paragraph)}
                     </p>
                 </div>
             </div>
             <section className="about-page__collage">
                 <h2 className="about-page__collage-head">
-                    Lorem ipsum dolor sit amet, consectetur adipiscing...
+                    {t("Lorem ipsum dolor sit amet, consectetur adipiscing...")}
                 </h2>
                 <div className="about-page__collage-images-grid">
                     <img src={imageService.hutPicture} alt="The hut" />
@@ -43,16 +48,16 @@ const AboutPage = () => {
                     />
                     <img src={imageService.womanPaintHut} alt="Painting" />
                     <div className="about-page__collage-text-box">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit,
-                        sed do eiusmod tempor incididunt ut labore et dolore
-                        magna aliqua.
+                        {t(
+                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
+                        )}
                     </div>
                     <img src={imageService.hotTube} alt="Hot tube" />
                 </div>
             </section>
             <section className="about-page__contacts">
                 <h2 className="about-page__contacts-head">
-                    Stay in touch with us
+                    {t("Stay in touch with us")}
                 </h2>
                 <div className="about-page__contacts-box">
                     <ContactList />
@@ -61,7 +66,7 @@ const AboutPage = () => {
             </section>
             <div className="about-page__from-love">
                 <span className="about-page__from-love-text">
-                    From Denmark, With love...
+                    {t("From Denmark, With love...")}
                 </span>
                 <div className="about-page__from-love-icon">
                     <img src={iconService.heart} alt="Heart" />

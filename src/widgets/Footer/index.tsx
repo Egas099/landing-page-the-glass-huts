@@ -1,18 +1,20 @@
+import { useTranslation } from "react-i18next";
 import { RightArrow, PayPol, MasterCard, Visa, BankTransfer } from "shared/svg";
 import "./styles.scss";
 
 export const Footer = () => {
+    const { t } = useTranslation();
     return (
         <footer className="footer">
             <div className="footer__cell">
                 <span className="footer__newsletter-header">
-                    {newsletterTitle}
+                    {t(newsletterTitle)}
                 </span>
                 <div>
                     <div className="footer__input-with-arrow">
                         <input
                             className="footer__input-with-arrow-email"
-                            placeholder="Email address"
+                            placeholder={t("Email address") || "Email address"}
                         />
                         <div className="footer__input-with-arrow-arrow">
                             <RightArrow />
@@ -20,7 +22,7 @@ export const Footer = () => {
                     </div>
                     <hr />
                     <span className="footer__newsletter-caption">
-                        {newsletterCaption}
+                        {t(newsletterCaption)}
                     </span>
                 </div>
             </div>
@@ -32,7 +34,7 @@ export const Footer = () => {
                             href={to}
                             key={index}
                         >
-                            {text}
+                            {t(text)}
                         </a>
                     ))}
                 </div>
@@ -43,7 +45,9 @@ export const Footer = () => {
                     <BankTransfer />
                 </div>
             </div>
-            <span className="footer__cell footer__copyright">{copyright}</span>
+            <span className="footer__cell footer__copyright">
+                {t(copyright)}
+            </span>
         </footer>
     );
 };

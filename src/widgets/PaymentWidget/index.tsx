@@ -1,20 +1,23 @@
+import { useTranslation } from "react-i18next";
 import "./styles.scss";
 
 export const PaymentWidget = () => {
+    const { t } = useTranslation();
+
     return (
         <div className="payment-widget">
             <span className="payment-widget__header">
                 <span className="payment-widget__header-name">
-                    The Glass Hut{" "}
-                </span>
+                    {t("The Glass Hut")}
+                </span>{" "}
                 <span className="payment-widget__header-location">
-                    Vesterborg, Denmark
+                    {t("Vesterborg, Denmark")}
                 </span>
             </span>
             <div className="payment-widget__form">
                 <div className="payment-widget__form-element">
                     <span className="payment-widget__form-element-head">
-                        Check in
+                        {t("Check in")}
                     </span>
                     <span className="payment-widget__form-element-text">
                         4/29/2021
@@ -23,7 +26,7 @@ export const PaymentWidget = () => {
                 <div className="payment-widget__form-divider"></div>
                 <div className="payment-widget__form-element">
                     <span className="payment-widget__form-element-head">
-                        Check in
+                        {t("Check out")}
                     </span>
                     <span className="payment-widget__form-element-text">
                         4/30/2021
@@ -32,7 +35,7 @@ export const PaymentWidget = () => {
                 <div className="payment-widget__form-divider"></div>
                 <div className="payment-widget__form-element">
                     <span className="payment-widget__form-element-head">
-                        Guests
+                        {t("Guests")}
                     </span>
                     <span className="payment-widget__form-element-text">
                         - 1 +
