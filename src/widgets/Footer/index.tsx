@@ -1,7 +1,7 @@
 import { RightArrow, PayPol, MasterCard, Visa, BankTransfer } from "shared/svg";
 import "./styles.scss";
 
-const Footer = () => {
+export const Footer = () => {
     return (
         <footer className="footer">
             <div className="footer__cell">
@@ -47,8 +47,6 @@ const Footer = () => {
         </footer>
     );
 };
-
-export default Footer;
 
 const newsletterTitle = "Newsletter";
 const newsletterCaption =

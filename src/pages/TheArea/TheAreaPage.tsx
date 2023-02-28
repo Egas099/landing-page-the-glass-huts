@@ -1,9 +1,9 @@
 import { iconService, imageService } from "shared/api";
 
-import ImageSliderWithSectionWithTabs from "widgets/ImageSliderWithSectionWithTabs/ImageSliderWithSectionWithTabs";
 import "./styles.scss";
 import { PanoramaWithContent, Button, ImageSlider } from "shared/ui";
 import { EmbeddedMap } from "entities/map";
+import { ImageSliderWithSectionWithTabs } from "widgets";
 
 const TheAreaPage = () => {
     return (

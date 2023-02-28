@@ -1,6 +1,6 @@
 import { imageService } from "shared/api";
 import { PanoramaWithContent } from "shared/ui";
-import ImageSliderWithSectionWithTabs from "widgets/ImageSliderWithSectionWithTabs/ImageSliderWithSectionWithTabs";
+import { ImageSliderWithSectionWithTabs } from "widgets";
 import "./styles.scss";
 
 const TheHutPage = () => {

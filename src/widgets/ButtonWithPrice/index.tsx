@@ -7,7 +7,7 @@ type Props = {
     text: string;
 };
 
-const ButtonWithPrice: FC<Props> = ({ text }) => {
+export const ButtonWithPrice: FC<Props> = ({ text }) => {
     return (
         <div className="button-with-price">
             <div className="button-with-price__button">
@@ -20,5 +20,3 @@ const ButtonWithPrice: FC<Props> = ({ text }) => {
         </div>
     );
 };
-
-export default ButtonWithPrice;

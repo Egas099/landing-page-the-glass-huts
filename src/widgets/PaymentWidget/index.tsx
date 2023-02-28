@@ -1,6 +1,6 @@
 import "./styles.scss";
 
-const PaymentWidget = () => {
+export const PaymentWidget = () => {
     return (
         <div className="payment-widget">
             <span className="payment-widget__header">
@@ -81,5 +81,3 @@ const PaymentWidget = () => {
         </div>
     );
 };
-
-export default PaymentWidget;

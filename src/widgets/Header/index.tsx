@@ -6,7 +6,7 @@ import "./styles.scss";
 import { LocaleSelect } from "features/LocaleSelect";
 import { useTranslation } from "react-i18next";
 
-const Header = () => {
+export const Header = () => {
     const { t } = useTranslation();
 
     return (
@@ -29,5 +29,3 @@ const Header = () => {
         </header>
     );
 };
-
-export default Header;

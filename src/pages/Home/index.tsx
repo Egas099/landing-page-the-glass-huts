@@ -8,7 +8,6 @@ import {
 import "./styles.scss";
 import { ContactList } from "entities/contacts";
 import { EmbeddedMap } from "entities/map";
-import ButtonWithPrice from "widgets/ButtonWithPrice";
 import {
     introSection,
     theCabinsSection,
@@ -16,6 +15,7 @@ import {
     facilities,
 } from "./content";
 import { useTranslation } from "react-i18next";
+import { ButtonWithPrice } from "widgets";
 
 const HomePage = () => {
     const { t } = useTranslation();

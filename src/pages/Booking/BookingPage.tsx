@@ -1,5 +1,5 @@
 import { CollapseRadioInput } from "shared/ui";
-import BookingWidget from "widgets/BookingWidget/BookingWidget";
+import { BookingWidget } from "widgets";
 import "./styles.scss";
 
 const BookingPage = () => {

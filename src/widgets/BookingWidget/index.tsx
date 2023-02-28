@@ -2,7 +2,7 @@ import { PriceLabel } from "entities/price";
 import { Button, InputField } from "shared/ui";
 import "./styles.scss";
 
-const BookingWidget = () => {
+export const BookingWidget = () => {
     return (
         <div className="booking-widget">
             <PriceLabel />
@@ -83,5 +83,3 @@ const BookingWidget = () => {
         </div>
     );
 };
-
-export default BookingWidget;

@@ -9,7 +9,7 @@ type Props = {
     sliderFromLeft: boolean;
 };
 
-const ImageSliderWithSectionWithTabs: FC<Props> = ({
+export const ImageSliderWithSectionWithTabs: FC<Props> = ({
     sectionTitle,
     tabs,
     imagesSources,
@@ -34,5 +34,3 @@ const ImageSliderWithSectionWithTabs: FC<Props> = ({
         </section>
     );
 };
-
-export default ImageSliderWithSectionWithTabs;

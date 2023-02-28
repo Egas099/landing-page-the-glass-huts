@@ -1,5 +1,5 @@
 import { InputField, InputArea, Button } from "shared/ui";
-import PaymentWidget from "widgets/PaymentWidget/PaymentWidget";
+import { PaymentWidget } from "widgets";
 import "./styles.scss";
 
 const PaymentPage = () => {
