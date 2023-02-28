@@ -1,4 +1,5 @@
 const ICON_BASE_URL = "http://localhost:3000/assets/svg";
+const FLAG_FOLDER_URL = "flags";
 
 export const iconService = {
     bedding_and_towels: `${ICON_BASE_URL}/bedding_and_towels.svg`,
@@ -25,4 +26,8 @@ export const iconService = {
     arrowDown: `${ICON_BASE_URL}/arrowDown.svg`,
     plus: `${ICON_BASE_URL}/plus.svg`,
     checkMark: `${ICON_BASE_URL}/checkMark.svg`,
+    germany: `${ICON_BASE_URL}/${FLAG_FOLDER_URL}/de.svg`,
+    denmark: `${ICON_BASE_URL}/${FLAG_FOLDER_URL}/dk.svg`,
+    greatBritain: `${ICON_BASE_URL}/${FLAG_FOLDER_URL}/gb.svg`,
+    russia: `${ICON_BASE_URL}/${FLAG_FOLDER_URL}/ru.svg`,
 };

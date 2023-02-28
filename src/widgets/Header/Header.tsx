@@ -7,7 +7,7 @@ import { LocaleSelect } from "features/LocaleSelect";
 import { useTranslation } from "react-i18next";
 
 const Header = () => {
-    const {t} = useTranslation()
+    const { t } = useTranslation();
 
     return (
         <header className="header">
@@ -17,12 +17,14 @@ const Header = () => {
             <div className="header__nav">
                 <NavBar direction="row" />
             </div>
-            <LocaleSelect />
-            <div className="header__button">
-                <Button text={t("Book now")} />
-            </div>
-            <div className="header__burger">
-                <BurgerMenu />
+            <div className="header__row">
+                <LocaleSelect />
+                <div className="header__button">
+                    <Button text={t("Book now")} />
+                </div>
+                <div className="header__burger">
+                    <BurgerMenu />
+                </div>
             </div>
         </header>
     );

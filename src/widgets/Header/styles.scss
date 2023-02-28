@@ -22,6 +22,11 @@
     &__logo {
         fill: var(--Grey-1);
     }
+    &__row {
+        display: flex;
+        align-items: center;
+        gap: var(--page-space-medium);
+    }
     &__button {
         height: 60px;
         width: 20vw;
@@ -30,7 +35,7 @@
     &__burger {
         display: none;
     }
-    @media screen and (max-width: 767px) {
+    @media screen and (max-width: 900px) {
         --app-header-height: 80px;
 
         &__nav,

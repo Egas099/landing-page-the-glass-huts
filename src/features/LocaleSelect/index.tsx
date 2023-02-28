@@ -1,29 +1,58 @@
-import { useCallback } from "react";
+import { useCallback, useMemo, useState } from "react";
 import { useTranslation } from "react-i18next";
-import { awaitableLanguages } from "shared/constants/i18n";
+import { availableLanguages } from "shared/constants/i18n";
+import { byCode, omitCode } from "./lib";
 import "./styles.scss";
 
 export const LocaleSelect = () => {
     const { i18n } = useTranslation();
+    const [isDropDownOpen, setIsDropDownOpen] = useState(false);
 
+    const toggleDropDownVisibility = useCallback(
+        () => setIsDropDownOpen((prev) => !prev),
+        []
+    );
     const handleLanguageSelect = useCallback(
-        (e: { target: { value: string } }) => {
-            i18n.changeLanguage(e.target.value);
+        (code: string) => () => {
+            i18n.changeLanguage(code);
+            setIsDropDownOpen(false);
         },
         [i18n]
     );
 
+    const currentLanguage = useMemo(
+        () =>
+            availableLanguages.find(byCode(i18n.language)) ||
+            availableLanguages[0],
+        [i18n.language]
+    );
+
+    const availableToChooseLanguages = useMemo(
+        () => availableLanguages.filter(omitCode(currentLanguage.code)),
+        [currentLanguage.code]
+    );
+
     return (
-        <select
-            className="locale-select"
-            onChange={handleLanguageSelect}
-            defaultValue={i18n.language}
-        >
-            {awaitableLanguages.map((lng) => (
-                <option key={lng} value={lng}>
-                    {lng}
-                </option>
-            ))}
-        </select>
+        <div className="locale-select">
+            <img
+                className="locale-select__flag"
+                src={currentLanguage.icon}
+                alt={currentLanguage.code}
+                onClick={toggleDropDownVisibility}
+            />
+            {isDropDownOpen && (
+                <div className="locale-select__drop-down">
+                    {availableToChooseLanguages.map(({ code, icon }) => (
+                        <img
+                            className="locale-select__flag"
+                            key={code}
+                            src={icon}
+                            alt={code}
+                            onClick={handleLanguageSelect(code)}
+                        />
+                    ))}
+                </div>
+            )}
+        </div>
     );
 };
