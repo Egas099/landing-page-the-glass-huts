@@ -46,7 +46,7 @@ export const Footer = () => {
                 </div>
             </div>
             <span className="footer__cell footer__copyright">
-                {t(copyright)}
+                {copyright}
             </span>
         </footer>
     );

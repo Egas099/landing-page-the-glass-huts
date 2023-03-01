@@ -10,14 +10,14 @@ const FAQPage = () => {
     return (
         <div className="faq-page">
             <div className="faq-page__list">
-                <Collapse summary={"PRICES"}>
+                <Collapse summary={t("Prices")}>
                     <p className="faq-page__paragraph">
                         <Trans>
                             <>From</> {{ price }} <>per night</>
                         </Trans>
                     </p>
                 </Collapse>
-                <Collapse summary={"CANCELLATION POLICY"}>
+                <Collapse summary={t("Cancellation policy")}>
                     <p className="faq-page__paragraph">
                         {t("Cancellation four weeks prior = 100% refund")}
                     </p>
@@ -28,24 +28,17 @@ const FAQPage = () => {
                         {t("Cancellation later than two weeks = full payment")}
                     </p>
                 </Collapse>
-                <Collapse summary={"THE WALK UP TO GLASS HUT"}>
+                <Collapse summary={t("The walk up to grass huts")}>
                     <p className="faq-page__paragraph">
                         {t(
-                            "You need to hike a steep hill to arrive at the treehouses, it takes approx 20-30 minutes on a trail with stairs and uneven ground."
+                            "You need to hike a steep hill to arrive at the glass houses, it takes approx 20-30 minutes on a trail with stairs and uneven ground."
                         )}
                     </p>
                 </Collapse>
-                <Collapse summary={"CAPACITY"}>
-                    <p className="faq-page__paragraph">
-                        {t(
-                            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-                        )}
-                    </p>
-                </Collapse>
-                <Collapse summary={"PETS"}>
+                <Collapse summary={t("Pets")}>
                     <p className="faq-page__paragraph">{t("No pets")}</p>
                 </Collapse>
-                <Collapse summary={"CHECK-IN / CHECK-OUT"}>
+                <Collapse summary={t("Check-in / Check-out")}>
                     <p className="faq-page__paragraph">
                         {t("Check-in: 2:00 PM - 11:00 PM")}
                     </p>

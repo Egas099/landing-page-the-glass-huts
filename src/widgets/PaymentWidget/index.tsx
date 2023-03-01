@@ -8,7 +8,7 @@ export const PaymentWidget = () => {
         <div className="payment-widget">
             <span className="payment-widget__header">
                 <span className="payment-widget__header-name">
-                    {t("The Glass Hut")}
+                    The Glass Hut
                 </span>{" "}
                 <span className="payment-widget__header-location">
                     {t("Vesterborg, Denmark")}
@@ -74,7 +74,7 @@ export const PaymentWidget = () => {
                 <hr className="payment-widget__list-divider" />
                 <div className="payment-widget__list-item">
                     <div className="payment-widget__list-item-total-label">
-                        Total
+                        {t("Total")}
                     </div>
                     <div className="payment-widget__list-item-total-value">
                         7.000kr

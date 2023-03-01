@@ -15,8 +15,8 @@ const PaymentPage = () => {
                     </h2>
                     <hr className="payment-page__divider" />
                     <div className="payment-page__personal-info-inputs">
-                        <InputField placeholder={t("First Name")} />
-                        <InputField placeholder={t("Last Name")} />
+                        <InputField placeholder={t("First name")} />
+                        <InputField placeholder={t("Last name")} />
                         <InputField placeholder={t("Email")} />
                         <InputField placeholder={t("Phone number")} />
                         <InputField placeholder={t("Address")} />

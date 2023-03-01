@@ -25,7 +25,7 @@ export const SectionWithTabs: FC<Props> = ({ sectionTitle, tabs }) => {
 
     return (
         <section className="section-with-tabs">
-            <h2 className="section-with-tabs__head">{sectionTitle}</h2>
+            <h2 className="section-with-tabs__head">{t(sectionTitle)}</h2>
             <div className="section-with-tabs__tabs">
                 {tabs.map((tab, index) => (
                     <span
