@@ -1,3 +1,4 @@
+export { Anchor } from "./Anchor";
 export { Button } from "./Button";
 export { Collapse } from "./Collapse";
 export { CollapseRadioInput } from "./CollapseRadioInput";

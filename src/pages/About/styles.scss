@@ -113,7 +113,7 @@
         margin: var(--page-space-medium) var(--page-space-large);
 
         &-head {
-            margin: var(--page-space-large) 0;
+            margin: var(--page-space-large) 0 var(--page-space-medium) 0;
             @media screen and (max-width: 767px) {
                 text-align: center;
             }
@@ -147,4 +147,12 @@
             width: 50px;
         }
     }
+}
+
+.anchor {
+}
+
+#contact_us {
+    position: absolute;
+    top: calc(var(--app-header-height) * (-1));
 }

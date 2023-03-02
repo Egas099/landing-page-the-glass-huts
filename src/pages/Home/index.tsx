@@ -16,9 +16,12 @@ import {
 } from "./content";
 import { useTranslation } from "react-i18next";
 import { ButtonWithPrice } from "widgets";
+import { ROUTES } from "shared/constants/routerPaths";
+import { useNavigate } from "react-router-dom";
 
 const HomePage = () => {
     const { t } = useTranslation();
+    const navigate = useNavigate();
 
     return (
         <div className="page">
@@ -92,7 +95,10 @@ const HomePage = () => {
             <div className="page__about">
                 <img src={imageService.outside3} alt="Outside" height="100%" />
                 <img src={imageService.inside2} alt="Inside" height="100%" />
-                <div className="page__about-more-button">
+                <div
+                    className="page__about-more-button"
+                    onClick={() => navigate(ROUTES.ABOUT)}
+                >
                     <Button text={t("More about us")} />
                 </div>
             </div>

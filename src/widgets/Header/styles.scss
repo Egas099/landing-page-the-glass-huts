@@ -1,8 +1,6 @@
 @import "/src/shared/mixins.scss";
 
 .header {
-    --app-header-height: 100px;
-
     position: sticky;
     top: 0;
     display: flex;

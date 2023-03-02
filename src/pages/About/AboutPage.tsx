@@ -1,12 +1,15 @@
 import { ContactList } from "entities/contacts";
 import ContactForm from "features/ContactForm";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import { iconService, imageService } from "shared/api";
-import { PanoramaWithContent, Button } from "shared/ui";
+import { ROUTES } from "shared/constants/routerPaths";
+import { PanoramaWithContent, Button, Anchor } from "shared/ui";
 import "./styles.scss";
 
 const AboutPage = () => {
     const { t } = useTranslation();
+    const navigate = useNavigate();
 
     return (
         <div className="about-page">
@@ -19,8 +22,12 @@ const AboutPage = () => {
                         {t("About Us")}
                     </h1>
                     <div className="about-page__panorama-buttons">
-                        <Button text={t("contact us")} type="transparent" />
-                        <Button text={t("read FAQ")} type="transparent" />
+                        <a href="#contact_us">
+                            <Button text={t("contact us")} type="transparent" />
+                        </a>
+                        <div onClick={() => navigate(ROUTES.FAQ)}>
+                            <Button text={t("read FAQ")} type="transparent" />
+                        </div>
                     </div>
                 </PanoramaWithContent>
             </section>
@@ -55,6 +62,7 @@ const AboutPage = () => {
                     <img src={imageService.hotTube} alt="Hot tube" />
                 </div>
             </section>
+            <Anchor id="contact_us" />
             <section className="about-page__contacts">
                 <h2 className="about-page__contacts-head">
                     {t("Stay in touch with us")}

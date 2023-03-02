@@ -1,0 +1,8 @@
+.anchor {
+    position: relative;
+
+    & > * {
+        position: absolute;
+        top: calc(var(--app-header-height) * (-1));
+    }
+}
