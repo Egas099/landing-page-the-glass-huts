@@ -20,6 +20,8 @@ const TheAreaPage = () => {
                     <a
                         className="area-page__panorama-location"
                         href="https://goo.gl/maps/5L37Z7CZYYJYrkey9"
+                        rel="noreferrer"
+                        target="_blank"
                     >
                         <img
                             src={iconService.geopoint}
