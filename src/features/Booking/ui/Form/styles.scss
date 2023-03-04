@@ -1,0 +1,66 @@
+@import "../../../../shared/mixins.scss";
+
+.booking-form {
+    padding: 21px;
+    border: 0.7px solid var(--Grey-green-1);
+    display: grid;
+    grid-template-columns: 1fr 0 1fr 0 1fr;
+    column-gap: 20px;
+
+    color: var(--Grey-1);
+    font-weight: 400;
+    font-size: 1.4rem;
+    line-height: 18px;
+
+    &__divider {
+        border-right: 0.7px solid var(--Grey-green-1);
+    }
+
+    &__element {
+        display: flex;
+        flex-direction: column;
+
+        &-head {
+            color: var(--Grey-1);
+            font-family: "DIN Medium";
+            font-weight: 500;
+            font-size: 1.2rem;
+            line-height: 16px;
+        }
+    }
+
+    &__guest {
+        display: flex;
+        flex-direction: row;
+        gap: 15px;
+
+        &-input {
+            @include disable-selection;
+            cursor: pointer;
+            &_disabled {
+                color: var(--Grey-green-3);
+            }
+        }
+    }
+
+    &__date-label {
+        position: relative;
+        @mixin full-size-hidden {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            width: auto;
+            height: auto;
+            opacity: 0;
+        }
+
+        input[type="date"] {
+            @include full-size-hidden;
+            &::-webkit-calendar-picker-indicator {
+                @include full-size-hidden;
+            }
+        }
+    }
+}

@@ -22,37 +22,6 @@
         }
     }
 
-    &__form {
-        padding: 21px;
-        border: 0.7px solid var(--Grey-green-1);
-        display: grid;
-        grid-template-columns: 1fr 0 1fr 0 1fr;
-        column-gap: 20px;
-
-        &-divider {
-            border-right: 0.7px solid var(--Grey-green-1);
-        }
-
-        &-element {
-            display: flex;
-            flex-direction: column;
-
-            &-head {
-                color: var(--Grey-1);
-                font-family: "DIN Medium";
-                font-weight: 500;
-                font-size: 1.2rem;
-                line-height: 16px;
-            }
-            &-text {
-                color: var(--Grey-1);
-                font-weight: 400;
-                font-size: 1.4rem;
-                line-height: 18px;
-            }
-        }
-    }
-
     &__book-button {
         height: 60px;
     }

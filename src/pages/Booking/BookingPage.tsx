@@ -11,7 +11,7 @@ const BookingPage = () => {
 
     return (
         <div className="booking-page">
-            <div className="booking-page__sections">
+            {/* <div className="booking-page__sections">
                 <section className="booking-page__catalog">
                     <h2 className="booking-page__section-head booking-page__section-head-main">
                         {t("Choose Additional Services")}
@@ -61,7 +61,7 @@ const BookingPage = () => {
                         </Trans>
                     </p>
                 </section>
-            </div>
+            </div> */}
             <aside>
                 <BookingWidget />
             </aside>

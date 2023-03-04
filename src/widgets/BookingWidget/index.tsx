@@ -1,4 +1,5 @@
 import { PriceLabel } from "entities/price";
+import { BookingForm } from "features/Booking";
 import { useTranslation } from "react-i18next";
 import { Button, InputField } from "shared/ui";
 import "./styles.scss";
@@ -9,36 +10,9 @@ export const BookingWidget = () => {
     return (
         <div className="booking-widget">
             <PriceLabel />
-            <div className="booking-widget__form">
-                <div className="booking-widget__form-element">
-                    <span className="booking-widget__form-element-head">
-                        {t("Check in")}
-                    </span>
-                    <span className="booking-widget__form-element-text">
-                        4/29/2021
-                    </span>
-                </div>
-                <div className="booking-widget__form-divider"></div>
-                <div className="booking-widget__form-element">
-                    <span className="booking-widget__form-element-head">
-                        {t("Check out")}
-                    </span>
-                    <span className="booking-widget__form-element-text">
-                        4/30/2021
-                    </span>
-                </div>
-                <div className="booking-widget__form-divider"></div>
-                <div className="booking-widget__form-element">
-                    <span className="booking-widget__form-element-head">
-                        {t("Guests")}
-                    </span>
-                    <span className="booking-widget__form-element-text">
-                        - 1 +
-                    </span>
-                </div>
-            </div>
+            <BookingForm/>
             <div className="booking-widget__book-button">
-                <Button text="Book" />
+                <Button text={t("Book")} />
             </div>
             <div className="booking-widget__list">
                 <div className="booking-widget__list-item">

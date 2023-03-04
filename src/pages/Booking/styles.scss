@@ -4,6 +4,7 @@
     gap: var(--page-space-large);
     margin: var(--page-space-medium) var(--page-space-small)
         var(--page-space-large) var(--page-space-large);
+        
     @media screen and (max-width: 1024px) {
         grid-template-columns: 1fr;
         margin-right: var(--page-space-large);
