@@ -1,5 +1,6 @@
+import { AdditionalServicesForm } from "features/AdditionalServicesForm";
+import { additionalServicesStore } from "features/AdditionalServicesForm/model";
 import { Trans, useTranslation } from "react-i18next";
-import { CollapseRadioInput } from "shared/ui";
 import { BookingWidget } from "widgets";
 import "./styles.scss";
 
@@ -11,16 +12,8 @@ const BookingPage = () => {
 
     return (
         <div className="booking-page">
-            {/* <div className="booking-page__sections">
-                <section className="booking-page__catalog">
-                    <h2 className="booking-page__section-head booking-page__section-head-main">
-                        {t("Choose Additional Services")}
-                    </h2>
-                    {catalog.map((item, index) => (
-                        <CollapseRadioInput {...item} key={index} />
-                    ))}
-                </section>
-
+            <div className="booking-page__sections">
+                <AdditionalServicesForm store={additionalServicesStore} />
                 <section>
                     <h2 className="booking-page__section-head">
                         {t("Hut rules")}
@@ -33,7 +26,6 @@ const BookingPage = () => {
                         </Trans>
                     </p>
                 </section>
-
                 <section>
                     <h2 className="booking-page__section-head">
                         {t("Cancellation policy")}
@@ -48,7 +40,6 @@ const BookingPage = () => {
                         </Trans>
                     </p>
                 </section>
-
                 <section>
                     <h2 className="booking-page__section-head">
                         {t("Important Information")}
@@ -61,7 +52,7 @@ const BookingPage = () => {
                         </Trans>
                     </p>
                 </section>
-            </div> */}
+            </div>
             <aside>
                 <BookingWidget />
             </aside>
@@ -70,48 +61,3 @@ const BookingPage = () => {
 };
 
 export default BookingPage;
-
-const catalog = [
-    {
-        summary: {
-            header: "Fresh Breakfast",
-            caption: "800kr",
-        },
-        details: [
-            {
-                header: "Classic Breakfast",
-                caption:
-                    "Bread, Coffee, milk, juice, and a selection of spreads + toppings.",
-            },
-        ],
-    },
-    {
-        summary: {
-            header: "Healthy Dinner",
-            caption: "1.200kr",
-        },
-        details: [
-            {
-                header: "Classic Dinner",
-                caption:
-                    "Bread, Coffee, milk, juice, and a selection of spreads + toppings.",
-            },
-            {
-                header: "Vegetarian stew",
-                caption:
-                    "Bread, Coffee, milk, juice, and a selection of spreads + toppings. ",
-            },
-            {
-                header: "Vegetarian stew",
-                caption:
-                    "Bread, Coffee, milk, juice, and a selection of spreads + toppings.",
-            },
-        ],
-    },
-    {
-        summary: {
-            header: "Electric Car Charge",
-            caption: "800kr",
-        },
-    },
-];

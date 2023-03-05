@@ -1,9 +1,11 @@
-.detail-item {
+.additional-service-option {
     display: flex;
     gap: 20px;
-    padding-left: 20px;
+
+    padding: 0 var(--side-space);
+
     font-size: 1.4rem;
-    line-height: 20px;
+    line-height: 2rem;
     color: var(--Grey-1);
 
     &__header {

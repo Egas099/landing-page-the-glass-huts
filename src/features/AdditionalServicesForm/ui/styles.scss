@@ -1,0 +1,14 @@
+@import "/src/shared/mixins.scss";
+
+.additional-services-form {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    
+    &__head {
+        font-weight: 400;
+        font-size: 2.4rem;
+        color: var(--Grey-green-1);
+        border-bottom: 0.7px solid var(--Grey-green-1);
+    }
+}

@@ -1,27 +1,30 @@
 @import "/src/shared/mixins.scss";
 
-.radio-details {
+@mixin centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.additional-service-radio {
+    --side-space: clamp(10px, 1.5vw, 20px);
+
     box-sizing: border-box;
 
     &__summary {
-        --summary-space: clamp(10px, 1.5vw, 20px);
-
+        @include centered;
         background-color: var(--Grey-green-4);
         box-sizing: border-box;
-        display: flex;
         flex-direction: row;
         justify-content: space-between;
-        align-items: center;
 
         height: 70px;
-        padding: 0 var(--summary-space);
+        padding: 0 var(--side-space);
 
         &-row {
-            display: flex;
+            @include centered;
             flex-direction: row;
-            justify-content: center;
-            align-items: center;
-            gap: var(--summary-space);
+            gap: var(--side-space);
         }
         &-header {
             margin-top: 0;
@@ -29,26 +32,28 @@
 
             font-weight: 600;
             font-size: 1.8rem;
-            line-height: 20px;
+            line-height: 2rem;
             color: var(--Grey-1);
         }
         &-caption {
             font-weight: 400;
             font-size: 1.6rem;
-            line-height: 18px;
+            line-height: 1.8rem;
             color: var(--Grey-1);
         }
         &-icon {
             @include disable-selection;
-            display: flex;
-            align-items: center;
-            justify-content: center;
+            @include centered;
+
+            width: 20px;
             height: 100%;
+
             cursor: pointer;
             transition: transform 0.3s;
-        }
-        &-icon--opened {
-            transform: rotateX(180deg);
+
+            &[data-isOpened="true"] {
+                transform: rotateX(180deg);
+            }
         }
         &-choose-span {
             @include disable-selection;
@@ -58,7 +63,10 @@
         }
     }
 
-    &__item {
+    &__option-list {
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
         margin-top: 32px;
         margin-bottom: 32px;
     }

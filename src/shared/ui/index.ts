@@ -1,7 +1,6 @@
 export { Anchor } from "./Anchor";
 export { Button } from "./Button";
 export { Collapse } from "./Collapse";
-export { CollapseRadioInput } from "./CollapseRadioInput";
 export { IconButton } from "./IconButton";
 export { IconWithCaption } from "./IconWithCaption";
 export { ImageSlider } from "./ImageSlider";

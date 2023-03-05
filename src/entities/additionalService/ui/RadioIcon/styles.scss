@@ -6,16 +6,23 @@
     display: flex;
     justify-content: center;
     align-items: center;
+
     min-width: 34px;
     height: 34px;
     border-radius: 50%;
+
     cursor: pointer;
     background-color: var(--White);
 
-    &--checked {
+    &[data-isChecked="true"] {
         background-color: var(--Grey-green-1);
     }
-    &--with-border {
+    &[data-withBorder="true"] {
         border: 0.7px solid var(--Grey-1);
+    }
+
+    &__img {
+        height: 15px;
+        width: 15px;
     }
 }
