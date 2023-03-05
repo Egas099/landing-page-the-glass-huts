@@ -37,8 +37,10 @@
         &-input {
             @include disable-selection;
             cursor: pointer;
-            &_disabled {
+
+            &[data-isDisabled="true"] {
                 color: var(--Grey-green-3);
+                cursor: auto;
             }
         }
     }

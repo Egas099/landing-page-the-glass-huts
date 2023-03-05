@@ -3,10 +3,10 @@ import {
     DAY_IN_MS,
     MIN_GUEST,
     MAX_GUEST,
-    MONTH_IN_MS,
-    WEEK_IN_MS,
-} from "../constants";
-import { fromInputDateValue, toInputDateValue } from "../lib";
+    MAX_BOOKING_PERIOD,
+    MAX_BOOKING_DURATION,
+} from "./constants";
+import { fromInputDateValue, toInputDateValue } from "./lib";
 
 export class BookingFormStore {
     constructor() {
@@ -19,12 +19,11 @@ export class BookingFormStore {
 
     changeCheckIn = (time: string) => {
         this.checkIn = time;
-        if (
-            fromInputDateValue(this.checkIn) > fromInputDateValue(this.checkOut)
-        ) {
-            this.checkOut = toInputDateValue(
-                fromInputDateValue(this.checkIn) + DAY_IN_MS
-            );
+
+        const checkInTime = fromInputDateValue(this.checkIn);
+        const checkOutTime = fromInputDateValue(this.checkOut);
+        if (checkInTime > checkOutTime) {
+            this.checkOut = toInputDateValue(checkInTime + DAY_IN_MS);
         }
     };
     changeCheckOut = (time: string) => {
@@ -46,7 +45,7 @@ export class BookingFormStore {
         return toInputDateValue(Date.now() + DAY_IN_MS);
     }
     get maxCheckInDate() {
-        return toInputDateValue(Date.now() + MONTH_IN_MS * 6);
+        return toInputDateValue(Date.now() + MAX_BOOKING_PERIOD);
     }
     get minCheckOutDate() {
         return toInputDateValue(
@@ -55,7 +54,7 @@ export class BookingFormStore {
     }
     get maxCheckOutDate() {
         return toInputDateValue(
-            fromInputDateValue(this.checkIn) + WEEK_IN_MS * 2
+            fromInputDateValue(this.checkIn) + MAX_BOOKING_DURATION
         );
     }
     get nightCount() {

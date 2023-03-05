@@ -1,5 +1,5 @@
 import { PriceLabel } from "entities/price";
-import { BookingForm } from "features/Booking";
+import { BookingForm } from "features/BookingForm";
 import { useTranslation } from "react-i18next";
 import { Button, InputField } from "shared/ui";
 import "./styles.scss";
@@ -10,7 +10,7 @@ export const BookingWidget = () => {
     return (
         <div className="booking-widget">
             <PriceLabel />
-            <BookingForm/>
+            <BookingForm />
             <div className="booking-widget__book-button">
                 <Button text={t("Book")} />
             </div>

@@ -8,3 +8,7 @@ export function toInputDateValue(time: number) {
 export function fromInputDateValue(date: string) {
     return new Date(date).getTime();
 }
+
+export function formateInputDateToView(dateFromInput: string) {
+    return new Date(dateFromInput).toLocaleDateString()
+}
