@@ -1,2 +1,2 @@
 export * from "./ui";
-export {price} from "./model"
+export * as priceModel from "./model";

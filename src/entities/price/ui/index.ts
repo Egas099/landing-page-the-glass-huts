@@ -1,2 +1,2 @@
-export { PriceBox } from "./PriceBox";
-export { PriceLabel } from "./PriceLabel";
+export * from "./PriceBox";
+export * from "./PriceLabel";

@@ -2,7 +2,7 @@ import { useEffect } from "react";
 import { Outlet, useLocation } from "react-router-dom";
 import { Header, Footer } from "widgets";
 
-const RootPage = () => {
+const RootLayout = () => {
     const { pathname } = useLocation();
 
     useEffect(() => {
@@ -18,4 +18,4 @@ const RootPage = () => {
     );
 };
 
-export default RootPage;
+export default RootLayout;

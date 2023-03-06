@@ -1,10 +1,10 @@
-import { Logo } from "shared/svg/Logo";
-import NavBar from "./NavBar/NavBar";
-import BurgerMenu from "./BurgerMenu/BurgerMenu";
-import { Button } from "shared/ui";
-import "./styles.scss";
-import { LocaleSelect } from "features/LocaleSelect";
 import { useTranslation } from "react-i18next";
+import { Button } from "shared/ui";
+import { Logo } from "shared/svg";
+import { LocaleSelect } from "features/LocaleSelect";
+import NavBar from "./ui/NavBar";
+import BurgerMenu from "./ui/BurgerMenu";
+import "./styles.scss";
 
 export const Header = () => {
     const { t } = useTranslation();

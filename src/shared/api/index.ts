@@ -1,2 +1,2 @@
-export { iconService } from "./iconService";
-export { imageService } from "./imageService";
+export * from "./iconService";
+export * from "./imageService";

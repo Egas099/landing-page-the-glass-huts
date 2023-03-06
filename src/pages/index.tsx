@@ -1,20 +1,20 @@
 import { RouterProvider } from "react-router-dom";
 import { createBrowserRouter } from "react-router-dom";
 import { BASE_URL, ROUTES } from "../shared/constants/routerPaths";
-import AboutPage from "./About/AboutPage";
-import BookingPage from "./Booking/BookingPage";
-import ErrorPage from "./ErrorPage/ErrorPage";
-import FAQPage from "./FAQ/FAQPage";
+import AboutPage from "./About";
+import BookingPage from "./Booking";
+import ErrorPage from "./ErrorPage";
+import FAQPage from "./FAQ";
 import HomePage from "./Home";
-import PaymentPage from "./Payment/PaymentPage";
-import RootPage from "./Root/RootPage";
-import TheAreaPage from "./TheArea/TheAreaPage";
-import TheHutPage from "./TheHut/TheHutPage";
+import PaymentPage from "./Payment";
+import RootLayout from "./RootLayout";
+import TheAreaPage from "./TheArea";
+import TheHutPage from "./TheHut";
 
 const router = createBrowserRouter([
     {
         path: BASE_URL,
-        element: <RootPage />,
+        element: <RootLayout />,
         errorElement: <ErrorPage />,
         children: [
             {

@@ -1,14 +1,15 @@
-import { useState } from "react";
+import { useCallback, useState } from "react";
 import { Button } from "shared/ui";
-import NavBar from "../NavBar/NavBar";
+import NavBar from "../NavBar";
 import "./styles.scss";
 
 const BurgerMenu = () => {
     const [isMenuOpened, setIsMenuOpened] = useState(false);
 
-    function toggleMenu() {
+    const toggleMenu = useCallback(() => {
         setIsMenuOpened((prev) => !prev);
-    }
+    }, []);
+
     return (
         <div
             className={`burger ${isMenuOpened ? "burger_opened" : ""}`}

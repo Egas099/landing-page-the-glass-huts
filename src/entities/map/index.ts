@@ -1,1 +1,1 @@
-export { EmbeddedMap } from "./ui/EmbeddedMap";
+export * from "./ui";
