@@ -1,5 +1,6 @@
+import { NewsletterSubscribe } from "features/NewsletterSubscribe";
 import { useTranslation } from "react-i18next";
-import { RightArrow, PayPol, MasterCard, Visa, BankTransfer } from "shared/svg";
+import { PayPol, MasterCard, Visa, BankTransfer } from "shared/svg";
 import "./styles.scss";
 
 export const Footer = () => {
@@ -7,24 +8,7 @@ export const Footer = () => {
     return (
         <footer className="footer">
             <div className="footer__cell">
-                <span className="footer__newsletter-header">
-                    {t(newsletterTitle)}
-                </span>
-                <div>
-                    <div className="footer__input-with-arrow">
-                        <input
-                            className="footer__input-with-arrow-email"
-                            placeholder={t("Email address") || "Email address"}
-                        />
-                        <div className="footer__input-with-arrow-arrow">
-                            <RightArrow />
-                        </div>
-                    </div>
-                    <hr />
-                    <span className="footer__newsletter-caption">
-                        {t(newsletterCaption)}
-                    </span>
-                </div>
+                <NewsletterSubscribe />
             </div>
             <div className="footer__cell">
                 <div className="footer__faq-links">
@@ -45,16 +29,11 @@ export const Footer = () => {
                     <BankTransfer />
                 </div>
             </div>
-            <span className="footer__cell footer__copyright">
-                {copyright}
-            </span>
+            <span className="footer__cell footer__copyright">{copyright}</span>
         </footer>
     );
 };
 
-const newsletterTitle = "Newsletter";
-const newsletterCaption =
-    "Sign up to our newsletter for special things and receive 10% off your next order.";
 const copyright = "© 2021 The Glass Huts";
 const links = [
     { to: "/", text: "Term and conditions" },

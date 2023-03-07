@@ -24,41 +24,6 @@
         }
     }
 
-    &__newsletter {
-        &-header {
-            font-weight: 600;
-            font-size: 1.6rem;
-        }
-        &-caption {
-            opacity: 80%;
-            font-weight: 300;
-            font-size: 1.6rem;
-        }
-    }
-
-    &__input-with-arrow {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-
-        &-email {
-            flex-grow: 1;
-            border: none;
-            background-color: transparent;
-            color: var(--White);
-            &::placeholder {
-                color: var(--White);
-                font-style: italic;
-            }
-            &:focus {
-                outline: none;
-            }
-        }
-        &-arrow {
-            fill: var(--Grey-green-4);
-        }
-    }
-
     &__faq-links {
         display: flex;
         flex-direction: row;
