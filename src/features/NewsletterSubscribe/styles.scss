@@ -2,6 +2,9 @@
     display: flex;
     flex-direction: column;
     gap: 24px;
+    @media screen and (max-width: 767px) {
+        align-items: center;
+    }
 
     &__header {
         font-weight: 600;

@@ -18,7 +18,7 @@
     &__cell {
         display: flex;
         flex-direction: column;
-        gap: 24px;
+        gap: 50px;
         @media screen and (max-width: 767px) {
             align-items: center;
         }
@@ -26,16 +26,15 @@
 
     &__faq-links {
         display: flex;
-        flex-direction: row;
         justify-content: space-between;
         gap: 24px;
 
         &-link {
+            cursor: pointer;
             font-family: "DIN Light";
             text-transform: uppercase;
             text-align: center;
             text-decoration: none;
-            color: var(--White);
             font-weight: 300;
             font-size: 1.4rem;
         }
@@ -45,7 +44,7 @@
         fill: var(--Grey-green-4);
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: flex-end;
         gap: 40px;
     }
 

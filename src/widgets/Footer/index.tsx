@@ -1,25 +1,26 @@
 import { NewsletterSubscribe } from "features/NewsletterSubscribe";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 import { PayPol, MasterCard, Visa, BankTransfer } from "shared/svg";
 import "./styles.scss";
 
 export const Footer = () => {
     const { t } = useTranslation();
+    const navigate = useNavigate();
+
     return (
         <footer className="footer">
-            <div className="footer__cell">
-                <NewsletterSubscribe />
-            </div>
+            <NewsletterSubscribe />
             <div className="footer__cell">
                 <div className="footer__faq-links">
                     {links.map(({ text, to }, index) => (
-                        <a
+                        <div
                             className="footer__faq-links-link"
-                            href={to}
+                            onClick={() => navigate(to)}
                             key={index}
                         >
                             {t(text)}
-                        </a>
+                        </div>
                     ))}
                 </div>
                 <div className="footer__payment-icons">
@@ -36,7 +37,7 @@ export const Footer = () => {
 
 const copyright = "© 2021 The Glass Huts";
 const links = [
-    { to: "/", text: "Term and conditions" },
-    { to: "/", text: "Cancellation policy" },
-    { to: "/", text: "Privacy policy" },
+    { to: "/faq", text: "Term and conditions" },
+    { to: "/faq", text: "Cancellation policy" },
+    { to: "/faq", text: "Privacy policy" },
 ];
