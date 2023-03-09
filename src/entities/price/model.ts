@@ -1,1 +1,5 @@
-export const price = "€3.200";
+export const priceStore = {
+    price: 3_200,
+    currency: "€",
+};
+export type PriceStore = typeof priceStore;

@@ -1,7 +1,7 @@
 export interface AdditionalService {
     id: number;
     name: string;
-    price: string;
+    price: number;
     options: OptionItem[];
 }
 
@@ -11,11 +11,21 @@ export interface OptionItem {
     caption: string;
 }
 
+export function getServiceById(serviceId: number) {
+    return LIST.find((service) => service.id === serviceId);
+}
+
+export function getOptionById(serviceId: number, optionId: number) {
+    return LIST.find((service) => service.id === serviceId)?.options.find(
+        (option) => option.id === optionId
+    );
+}
+
 export const LIST: AdditionalService[] = [
     {
         id: 1,
         name: "Fresh Breakfast",
-        price: "800kr",
+        price: 800,
         options: [
             {
                 id: 1,
@@ -34,7 +44,7 @@ export const LIST: AdditionalService[] = [
     {
         id: 2,
         name: "Healthy Dinner",
-        price: "1.200kr",
+        price: 1200,
         options: [
             {
                 id: 1,
@@ -59,7 +69,7 @@ export const LIST: AdditionalService[] = [
     {
         id: 3,
         name: "Electric Car Charge",
-        price: "800kr",
+        price: 800,
         options: [],
     },
 ];

@@ -26,41 +26,7 @@
         height: 60px;
     }
 
-    &__list {
-        display: flex;
-        flex-direction: column;
-        gap: 21px;
-
-        &-divider {
-            width: 100%;
-        }
-
-        &-item {
-            display: flex;
-            flex-direction: row;
-            justify-content: space-between;
-
-            &-label,
-            &-value {
-                font-weight: 400;
-                font-size: 1.6rem;
-                line-height: 18px;
-                color: var(--Grey-1);
-            }
-
-            &-total-label,
-            &-total-value {
-                color: var(--Grey-1);
-                font-weight: 600;
-                font-size: 2rem;
-                line-height: 18px;
-            }
-
-            &--discount {
-                color: var(--Green-1);
-            }
-        }
-    }
+    
 
     &__coupon-input {
         display: grid;

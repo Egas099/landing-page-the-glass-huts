@@ -1,7 +1,7 @@
 import { additionalServiceModel } from "entities/additionalService";
 import { makeAutoObservable } from "mobx";
 
-interface AdditionalServicesForm {
+export interface AdditionalServicesForm {
     [serviceId: number]: {
         selected: boolean;
         option: number;
