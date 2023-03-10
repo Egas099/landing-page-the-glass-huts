@@ -1,5 +1,4 @@
 import { AdditionalServicesForm } from "features/AdditionalServicesForm";
-import { additionalServicesStore } from "features/AdditionalServicesForm/model";
 import { Trans, useTranslation } from "react-i18next";
 import { BookingWidget } from "widgets";
 import "./styles.scss";
@@ -13,7 +12,7 @@ const BookingPage = () => {
     return (
         <div className="booking-page">
             <div className="booking-page__sections">
-                <AdditionalServicesForm store={additionalServicesStore} />
+                <AdditionalServicesForm />
                 <section>
                     <h2 className="booking-page__section-head">
                         {t("Hut rules")}

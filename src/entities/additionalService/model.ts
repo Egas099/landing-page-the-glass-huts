@@ -1,3 +1,5 @@
+import { makeAutoObservable } from "mobx";
+
 export interface AdditionalService {
     id: number;
     name: string;
@@ -11,14 +13,9 @@ export interface OptionItem {
     caption: string;
 }
 
-export function getServiceById(serviceId: number) {
-    return LIST.find((service) => service.id === serviceId);
-}
-
-export function getOptionById(serviceId: number, optionId: number) {
-    return LIST.find((service) => service.id === serviceId)?.options.find(
-        (option) => option.id === optionId
-    );
+export interface ServiceWithPrice {
+    name: string;
+    price: number;
 }
 
 export const LIST: AdditionalService[] = [
@@ -73,3 +70,76 @@ export const LIST: AdditionalService[] = [
         options: [],
     },
 ];
+
+const initialState = LIST.map((service) => ({
+    ...service,
+    selected: false,
+    selectedOption: 1,
+}));
+
+export class AdditionalServicesStore {
+    constructor() {
+        makeAutoObservable(this);
+    }
+    additionalServices = initialState;
+
+    findServiceById(serviceId: number) {
+        return this.additionalServices.find(
+            (service) => service.id === serviceId
+        );
+    }
+    findOptionById(serviceId: number, optionId: number) {
+        return this.additionalServices
+            .find((service) => service.id === serviceId)
+            ?.options.find((option) => option.id === optionId);
+    }
+    isServiceSelected(serviceId: number) {
+        return Boolean(this.findServiceById(serviceId)?.selected);
+    }
+    findSelectedOption(serviceId: number) {
+        return this.findServiceById(serviceId)?.selectedOption || 1;
+    }
+    toggleService(serviceId: number) {
+        const service = this.findServiceById(serviceId);
+        if (!service) throw new Error(`Service not found (${serviceId})`);
+
+        service.selected = !service.selected;
+    }
+    selectOption(serviceId: number, optionId: number) {
+        const service = this.findServiceById(serviceId);
+        if (!service) throw new Error(`Service not found (${serviceId})`);
+
+        if (service.selectedOption === optionId) {
+            service.selected = false;
+        } else {
+            service.selected = true;
+            service.selectedOption = optionId;
+        }
+    }
+    get selectedServices() {
+        return this.additionalServices.filter((service) => service.selected);
+    }
+    get bill() {
+        return this.selectedServices
+            .map((service) => {
+                const price = service.price;
+                let selectedServiceName = this.findOptionById(
+                    service.id,
+                    service.selectedOption
+                )?.name;
+                if (!selectedServiceName) {
+                    selectedServiceName = service.name;
+                }
+                if (selectedServiceName && price) {
+                    return { name: selectedServiceName, price };
+                }
+                return undefined;
+            })
+            .filter((item): item is ServiceWithPrice => item !== undefined);
+    }
+    get totalPrice() {
+        return this.selectedServices.reduce((sum, item) => sum + item.price, 0);
+    }
+}
+
+export const additionalServicesStore = new AdditionalServicesStore();

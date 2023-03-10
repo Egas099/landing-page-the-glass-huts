@@ -6,12 +6,13 @@ import {
     additionalServiceModel,
     AdditionalServiceRadio,
 } from "entities/additionalService";
-import { additionalServicesStore, AdditionalServicesStore } from "../model";
 
 interface Props {
-    store?: AdditionalServicesStore;
+    store?: additionalServiceModel.AdditionalServicesStore;
 }
-const Form: FC<Props> = ({ store = additionalServicesStore }) => {
+const Form: FC<Props> = ({
+    store = additionalServiceModel.additionalServicesStore,
+}) => {
     const { t } = useTranslation();
 
     const handleServiceToggle = useCallback(
@@ -38,8 +39,8 @@ const Form: FC<Props> = ({ store = additionalServicesStore }) => {
                     service={service}
                     onServiceSelect={handleServiceToggle}
                     onOptionSelect={handleOptionSelect}
-                    isServiceSelected={store.form[service.id].selected}
-                    selectedOption={store.form[service.id].option}
+                    isServiceSelected={store.isServiceSelected(service.id)}
+                    selectedOption={store.findSelectedOption(service.id)}
                 />
             ))}
         </section>
