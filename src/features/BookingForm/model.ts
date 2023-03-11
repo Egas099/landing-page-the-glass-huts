@@ -6,6 +6,8 @@ import {
     MAX_GUEST,
     MAX_BOOKING_PERIOD,
     MAX_BOOKING_DURATION,
+    MAX_NIGHT_COUNT,
+    MIN_NIGHT_COUNT,
 } from "./constants";
 import { fromInputDateValue, toInputDateValue } from "./lib";
 
@@ -14,17 +16,20 @@ export class BookingFormStore {
         makeAutoObservable(this);
     }
 
-    checkIn = toInputDateValue(Date.now());
-    checkOut = toInputDateValue(Date.now() + 1000 * 3600 * 24);
+    checkIn = this.minCheckInDate;
+    checkOut = this.minCheckOutDate;
     guestCount = 1;
 
     changeCheckIn = (time: string) => {
         this.checkIn = time;
+        const checkInTime = fromInputDateValue(time);
 
-        const checkInTime = fromInputDateValue(this.checkIn);
-        const checkOutTime = fromInputDateValue(this.checkOut);
-        if (checkInTime > checkOutTime) {
+        if (this.nightCount <= MIN_NIGHT_COUNT) {
             this.checkOut = toInputDateValue(checkInTime + DAY_IN_MS);
+        } else if (this.nightCount > MAX_NIGHT_COUNT) {
+            this.checkOut = toInputDateValue(
+                checkInTime + MAX_BOOKING_DURATION
+            );
         }
     };
     changeCheckOut = (time: string) => {
@@ -49,9 +54,7 @@ export class BookingFormStore {
         return toInputDateValue(Date.now() + MAX_BOOKING_PERIOD);
     }
     get minCheckOutDate() {
-        return toInputDateValue(
-            fromInputDateValue(this.checkIn) + DAY_IN_MS * 2
-        );
+        return toInputDateValue(fromInputDateValue(this.checkIn) + DAY_IN_MS);
     }
     get maxCheckOutDate() {
         return toInputDateValue(
