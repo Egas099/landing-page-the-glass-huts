@@ -1,0 +1,19 @@
+.price-with-label {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    color: var(--Grey-1);
+    line-height: 1.8rem;
+
+    font-weight: 400;
+    font-size: 1.6rem;
+
+    &[data-isDiscount="true"] {
+        color: var(--Green-1);
+    }
+    &[data-isTotal="true"] {
+        font-weight: 600;
+        font-size: 2rem;
+    }
+}

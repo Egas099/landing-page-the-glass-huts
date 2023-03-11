@@ -1,0 +1,9 @@
+.bill {
+    display: flex;
+    flex-direction: column;
+    gap: 21px;
+
+    &__divider {
+        width: 100%;
+    }
+}

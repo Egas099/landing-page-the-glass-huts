@@ -13,7 +13,7 @@ export const customMissingKeyHandler =
                 defaultValue || key
             );
         } catch (error) {
-            console.log("MissingTranslationManager error: ", error);
+            console.error("MissingTranslationManager error: ", error);
         }
         return key;
     };

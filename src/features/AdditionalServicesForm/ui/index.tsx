@@ -1,4 +1,4 @@
-import { FC, useCallback } from "react";
+import { useCallback } from "react";
 import { useTranslation } from "react-i18next";
 import { observer } from "mobx-react-lite";
 import "./styles.scss";
@@ -7,13 +7,9 @@ import {
     AdditionalServiceRadio,
 } from "entities/additionalService";
 
-interface Props {
-    store?: additionalServiceModel.AdditionalServicesStore;
-}
-const Form: FC<Props> = ({
-    store = additionalServiceModel.additionalServicesStore,
-}) => {
+const Form = () => {
     const { t } = useTranslation();
+    const { additionalServicesStore: store } = additionalServiceModel;
 
     const handleServiceToggle = useCallback(
         (serviceId: number) => {
@@ -33,14 +29,14 @@ const Form: FC<Props> = ({
             <h2 className="additional-services-form__head">
                 {t("Choose Additional Services")}
             </h2>
-            {additionalServiceModel.LIST.map((service, index) => (
+            {store.additionalServices.map((service, index) => (
                 <AdditionalServiceRadio
                     key={index}
                     service={service}
                     onServiceSelect={handleServiceToggle}
                     onOptionSelect={handleOptionSelect}
-                    isServiceSelected={store.isServiceSelected(service.id)}
-                    selectedOption={store.findSelectedOption(service.id)}
+                    isServiceSelected={service.selected}
+                    selectedOption={service.selectedOption}
                 />
             ))}
         </section>

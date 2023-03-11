@@ -1,3 +1,4 @@
+import { priceModel } from "entities/price";
 import { makeAutoObservable } from "mobx";
 import {
     DAY_IN_MS,
@@ -62,6 +63,9 @@ export class BookingFormStore {
             fromInputDateValue(this.checkOut) -
             fromInputDateValue(this.checkIn);
         return Math.ceil(timeDiff / DAY_IN_MS);
+    }
+    get totalPrice() {
+        return priceModel.priceStore.price * this.guestCount * this.nightCount;
     }
 }
 
