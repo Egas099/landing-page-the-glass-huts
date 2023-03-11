@@ -2,25 +2,21 @@ import { Trans, useTranslation } from "react-i18next";
 import { observer } from "mobx-react-lite";
 import "./styles.scss";
 import { priceModel } from "entities/price";
-import { additionalServiceModel } from "entities/additionalService";
 import { BookingFormModel } from "features/BookingForm";
-import { discountsList } from "features/Bill/constants";
 import { PriceWithLabel } from "../PriceWithLabel";
 import { BillModel } from "features/Bill";
+import { DiscountModel } from "entities/discount";
 
 const List = () => {
     const { t } = useTranslation();
-    const { totalPrice: additionalServicesPrice } =
-        additionalServiceModel.additionalServicesStore;
     const {
         nightCount,
         guestCount,
         totalPrice: bookingPrice,
     } = BookingFormModel.bookingStore;
     const { currency, price: pricePerNight } = priceModel.priceStore;
-    const { additionalServicesBill } = BillModel.billStore;
-
-    const totalBookingPrice = bookingPrice + additionalServicesPrice;
+    const { discount, name: discountName } = DiscountModel.discountStore;
+    const { additionalServicesBill, totalBookingPrice } = BillModel.billStore;
 
     return (
         <div className="bill">
@@ -35,11 +31,11 @@ const List = () => {
                     {t(item.name)}
                 </PriceWithLabel>
             ))}
-            {discountsList.map((item) => (
-                <PriceWithLabel price={`${item.price} ${currency}`} isDiscount>
-                    {t(item.name)}
+            {discount ? (
+                <PriceWithLabel price={`${discount} %`} isDiscount>
+                    {t(discountName)}
                 </PriceWithLabel>
-            ))}
+            ) : null}
             <hr className="bill__divider" />
             <PriceWithLabel price={`${totalBookingPrice} ${currency}`} isTotal>
                 {t("Total")}

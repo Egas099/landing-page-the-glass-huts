@@ -5,31 +5,7 @@
     border: 0.7px solid var(--Grey-green-1);
     gap: 24px;
 
-    &__price {
-        &-value {
-            font-style: normal;
-            font-weight: 600;
-            font-size: 2.5rem;
-            line-height: 40px;
-            color: var(--Grey-1);
-        }
-        &-unit {
-            font-style: normal;
-            font-weight: 400;
-            font-size: 1.6rem;
-            line-height: 40px;
-            color: var(--Grey-1);
-        }
-    }
-
     &__book-button {
         height: 60px;
-    }
-
-    
-
-    &__coupon-input {
-        display: grid;
-        grid-template-columns: 2fr 1fr;
     }
 }
