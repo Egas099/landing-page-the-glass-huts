@@ -13,3 +13,5 @@ interface Section {
     header: Header;
     paragraph: Paragraph;
 }
+
+type PropsWithClassName<P = unknown> = P & { className?: string };

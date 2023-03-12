@@ -10,11 +10,17 @@ type Props = {
     formId?: string;
 };
 
-export const Button: FC<Props> = ({ text, onClick, type = "primary", formId }) => {
+export const Button: FC<PropsWithClassName<Props>> = ({
+    text,
+    onClick,
+    type = "primary",
+    formId,
+    className,
+}) => {
     return (
         <button
             form={formId}
-            className={`button button-${type}`}
+            className={`button button-${type} ${className}`}
             onClick={onClick}
             type={formId ? "submit" : "button"}
         >
