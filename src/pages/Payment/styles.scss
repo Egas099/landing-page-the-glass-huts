@@ -78,6 +78,27 @@
         }
     }
     &__aside {
+        display: flex;
+        flex-direction: column;
+        padding: 24px;
+        height: min-content;
+        border: 0.7px solid var(--Grey-green-1);
+        gap: 24px;
+        color: var(--Grey-1);
+        font-weight: 400;
+
+        &-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            &-name {
+                font-size: 2.4rem;
+            }
+            &-location {
+                font-size: 1.6rem;
+            }
+        }
+
         @media screen and (max-width: 1024px) {
             order: 1;
         }

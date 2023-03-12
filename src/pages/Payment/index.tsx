@@ -1,6 +1,7 @@
+import { Bill } from "features/Bill";
+import { BookingForm } from "features/BookingForm";
 import { Trans, useTranslation } from "react-i18next";
 import { InputField, InputArea, Button } from "shared/ui";
-import { PaymentWidget } from "widgets";
 import "./styles.scss";
 
 const PaymentPage = () => {
@@ -66,7 +67,16 @@ const PaymentPage = () => {
                 </div>
             </form>
             <div className="payment-page__aside">
-                <PaymentWidget />
+                <div className="payment-page__aside-head">
+                    <span className="payment-page__aside-head-name">
+                        The Glass Hut
+                    </span>{" "}
+                    <span className="payment-page__aside-head-location">
+                        {t("Vesterborg, Denmark")}
+                    </span>
+                </div>
+                <BookingForm />
+                <Bill />
             </div>
         </div>
     );
