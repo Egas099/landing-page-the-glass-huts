@@ -7,9 +7,13 @@ type Props = {
     link: string;
 };
 
-export const IconButton: FC<Props> = ({ iconSource, link, alternativeText }) => {
+export const IconButton: FC<Props> = ({
+    iconSource,
+    link,
+    alternativeText,
+}) => {
     return (
-        <a className="icon-button" href={link}>
+        <a className="icon-button" href={link} target="_blank" rel="noreferrer">
             <img
                 src={iconSource}
                 alt={alternativeText}

@@ -5,15 +5,18 @@ import { LocaleSelect } from "features/LocaleSelect";
 import NavBar from "./ui/NavBar";
 import BurgerMenu from "./ui/BurgerMenu";
 import "./styles.scss";
+import { useNavigate } from "react-router-dom";
+import { ROUTES } from "shared/constants";
 
 export const Header = () => {
     const { t } = useTranslation();
+    const navigate = useNavigate();
 
     return (
         <header className="header">
-            <a className="header__logo" href="/">
+            <div className="header__logo" onClick={() => navigate(ROUTES.HOME)}>
                 <Logo />
-            </a>
+            </div>
             <div className="header__nav">
                 <NavBar direction="row" />
             </div>
