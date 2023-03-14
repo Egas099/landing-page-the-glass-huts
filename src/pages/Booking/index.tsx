@@ -4,7 +4,8 @@ import { ApplyCoupon } from "features/ApplyCoupon";
 import { Bill } from "features/Bill";
 import { BookingForm } from "features/BookingForm";
 import { Trans, useTranslation } from "react-i18next";
-import { faqContent as content } from "shared/constants";
+import { useNavigate } from "react-router-dom";
+import { faqContent as content, ROUTES } from "shared/constants";
 import { Button } from "shared/ui";
 import "./styles.scss";
 
@@ -13,6 +14,7 @@ const endDateOfHalfRefundCancellation = "Apr 1";
 
 const BookingPage = () => {
     const { t } = useTranslation();
+    const navigate = useNavigate();
 
     return (
         <div className="booking-page">
@@ -63,6 +65,7 @@ const BookingPage = () => {
                 <Button
                     text={t("Book")}
                     className="booking-page__aside-book-button"
+                    onClick={() => navigate(ROUTES.PAYMENT)}
                 />
                 <Bill />
                 <ApplyCoupon />

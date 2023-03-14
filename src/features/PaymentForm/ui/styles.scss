@@ -1,0 +1,67 @@
+.payment-form {
+    display: flex;
+    flex-direction: column;
+    @media screen and (max-width: 1024px) {
+        order: 2;
+    }
+
+    &__space {
+        height: var(--page-space-medium);
+    }
+    &__divider {
+        margin-top: 0;
+        margin-bottom: 24px;
+        width: 100%;
+    }
+    &__section-head {
+        font-weight: 600;
+        font-size: 2.4rem;
+        color: var(--Grey-green-1);
+    }
+    &__personal-info-inputs {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 24px;
+    }
+    &__card-form {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+
+        &-row {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            & > * {
+                margin-right: -2px;
+            }
+            &-with-gap {
+                gap: 24px;
+            }
+        }
+    }
+    &__message {
+        height: 100px;
+    }
+    &__confirm {
+        display: grid;
+        margin-top: var(--page-space-small);
+        gap: var(--page-space-small);
+
+        &-accepting {
+            color: var(--Grey-1);
+            font-weight: 400;
+        }
+        &-terms-and-conditions {
+            cursor: pointer;
+            color: var(--Grey-green-1);
+            text-decoration-line: underline;
+        }
+        &-button {
+            height: 60px;
+            width: 384px;
+            @media screen and (max-width: 480px) {
+                width: 100%;
+            }
+        }
+    }
+}
