@@ -4,6 +4,7 @@ import { ApplyCoupon } from "features/ApplyCoupon";
 import { Bill } from "features/Bill";
 import { BookingForm } from "features/BookingForm";
 import { Trans, useTranslation } from "react-i18next";
+import { faqContent as content } from "shared/constants";
 import { Button } from "shared/ui";
 import "./styles.scss";
 
@@ -22,11 +23,12 @@ const BookingPage = () => {
                         {t("Hut rules")}
                     </h2>
                     <p className="booking-page__sections-paragraph">
-                        <Trans>
-                            Check-in: 2:00 PM - 11:00 PM <br />
-                            Checkout: 11:00 AM <br /> Not suitable for children
-                            and infants <br /> No smoking <br /> No pets
-                        </Trans>
+                        {content.hutRules.map((rule) => (
+                            <>
+                                {t(rule)}
+                                <br />
+                            </>
+                        ))}
                     </p>
                 </section>
                 <section>
@@ -36,7 +38,10 @@ const BookingPage = () => {
                     <p className="booking-page__sections-paragraph">
                         <Trans>
                             Free cancellation until 1:00 PM on{" "}
-                            {{ endDateOfFreeCancellation }} <br />
+                            {{ endDateOfFreeCancellation }}
+                        </Trans>
+                        <br />
+                        <Trans>
                             After that, cancel before 2:00 PM on{" "}
                             {{ endDateOfHalfRefundCancellation }} and get a 50%
                             refund, minus the first night and service fee.
@@ -48,11 +53,7 @@ const BookingPage = () => {
                         {t("Important Information")}
                     </h2>
                     <p className="booking-page__sections-paragraph">
-                        <Trans>
-                            You need to hike a steep hill to arrive at the glass
-                            houses, it takes approx 20-30 minutes on a trail
-                            with stairs and uneven ground.
-                        </Trans>
+                        {t(content.roadToHuts)}
                     </p>
                 </section>
             </div>
