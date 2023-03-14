@@ -1,5 +1,6 @@
 import { FormEvent, useCallback } from "react";
 import { Trans, useTranslation } from "react-i18next";
+import { PayPol, MasterCard, Visa, BankTransfer } from "shared/svg";
 import { Button, InputArea, InputField } from "shared/ui";
 import "./styles.scss";
 
@@ -78,7 +79,15 @@ const Form = () => {
                 />
             </div>
             <div className="payment-form__space" />
-            <h2 className="payment-form__section-head">{t("Pay with")}</h2>
+            <div className="payment-form__pay-with-head">
+                <h2 className="payment-form__section-head">{t("Pay with")}</h2>
+                <div className="payment-form__pay-with-head-payment-icons">
+                    <PayPol />
+                    <MasterCard />
+                    <Visa />
+                    <BankTransfer />
+                </div>
+            </div>
             <hr className="payment-form__divider" />
             <div className="payment-form__card-form">
                 {/* <InputField placeholder={t("Credit or debit card")} /> */}

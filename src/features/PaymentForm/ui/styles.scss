@@ -18,6 +18,18 @@
         font-size: 2.4rem;
         color: var(--Grey-green-1);
     }
+    &__pay-with-head {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+
+        &-payment-icons {
+            display: inherit;
+            align-items: center;
+            gap: 20px;
+            fill: var(--Grey-green-1);
+        }
+    }
     &__personal-info-inputs {
         display: grid;
         grid-template-columns: 1fr 1fr;
